@@ -1,0 +1,90 @@
+/* Preferred box-sizing value */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-width: 100%;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--main-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    border-radius: 7px;
+    max-width: 375px;
+    padding: 25px;
+    background-color: var(--card-bg);
+}
+
+.main-image {
+    border-radius: 7px;
+    margin-bottom: 1em;
+}
+
+h2 {
+    color: #ffffff;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+}
+
+p {
+    color: var(--soft-blue);
+    font-weight: 300;
+
+}
+
+.product__details {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 1em;
+}
+
+p.product__text {
+    margin-bottom: 1em;
+}
+
+p.product__price {
+    color: var(--cyan);
+    flex-grow: 1;
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid hsl(215, 51%, 70%);
+    padding-top: 15px;
+}
+
+.creator__img {
+    border: 1px solid white;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.creator__name {
+    color: #ffffff;
+}
