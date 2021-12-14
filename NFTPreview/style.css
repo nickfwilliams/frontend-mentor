@@ -23,9 +23,14 @@ img {
     max-width: 100%;
 }
 
+/*  ==========
+    general styles & layout
+    ========== */
+
 body {
     height: 100vh;
     font-family: 'Outfit', sans-serif;
+    font-size: 18px;
     background-color: var(--main-bg);
     display: flex;
     justify-content: center;
@@ -39,14 +44,13 @@ body {
     background-color: var(--card-bg);
 }
 
-.main-image {
-    border-radius: 7px;
-    margin-bottom: 1em;
-}
+/*  ==========
+    typography & links
+    ========== */
 
 h2 {
     color: #ffffff;
-    margin-bottom: 0.5em;
+    margin: 0.5em 0;
     font-weight: 400;
 }
 
@@ -56,11 +60,79 @@ p {
 
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #ffffff;
+}
+
+a:hover {
+    color: var(--cyan);
+}
+
+/*  ==========
+    main crypto image
+    ========== */
+
+.main-image {
+    border-radius: 7px;
+    display: block;
+}
+
+.image-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    display: block;
+}
+
+.overlay {
+    position: relative;
+    display: block;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.overlay > img {
+    vertical-align: middle;
+}
+
+.overlay::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--cyan);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: .5s linear;
+}
+
+.overlay:hover::before {
+    opacity: 0.5;
+    border-radius: 7px;
+  }
+
+/*  ==========
+    product details
+    ========== */
+
 .product__details {
     display: flex;
-    gap: 5px;
+    align-items: center;
+    gap: 4px;
     margin-bottom: 1em;
 }
+
+.product__details img {
+    align-self: center;
+}
+
 
 p.product__text {
     margin-bottom: 1em;
@@ -71,12 +143,17 @@ p.product__price {
     flex-grow: 1;
 }
 
+/*  ==========
+    creator details
+    ========== */
+
 .creator {
     display: flex;
     align-items: center;
     gap: 10px;
     border-top: 1px solid hsl(215, 51%, 70%);
     padding-top: 15px;
+    font-size: 0.9em;
 }
 
 .creator__img {
