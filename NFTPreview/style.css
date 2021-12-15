@@ -50,8 +50,9 @@ body {
     typography & links
     ================== */
 
-h2 {
+h1 {
     color: hsl(0, 0%, 100%);
+    font-size: 1.1em;
     margin: 0.5em 0;
     font-weight: 400;
 }
@@ -59,10 +60,10 @@ h2 {
 p {
     color: var(--soft-blue);
     font-weight: 300;
-
 }
 
 a {
+    color: color: hsl(0, 0%, 100%);
     text-decoration: none;
 }
 
@@ -180,6 +181,5 @@ p.product__price {
 @media only screen and (max-width: 420px) {
         .main-container {
             max-width: 320px;
-            border: 1px solid red;
         }
 }
