@@ -28,9 +28,9 @@ img {
 /*  =======================
     general styles & layout
     ======================= */
-
+    
 body {
-    height: 100vh;
+    min-height: 100vh;
     font-family: 'Outfit', sans-serif;
     font-size: 18px;
     background-color: var(--main-bg);
@@ -46,11 +46,22 @@ body {
     background-color: var(--card-bg);
 }
 
+.sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
 /*  ==================
     typography & links
     ================== */
-
-h1 {
+    
+h2 {
     color: hsl(0, 0%, 100%);
     font-size: 1.1em;
     margin: 0.5em 0;
