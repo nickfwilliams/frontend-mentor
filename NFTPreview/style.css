@@ -160,6 +160,7 @@ p.product__text {
 p.product__price {
     color: var(--cyan);
     flex-grow: 1;
+    font-weight: 600;
 }
 
 /*  ===============
