@@ -44,7 +44,7 @@ img {
     font-family: 'Lexend Deca', sans-serif;
     font-size: 15px;
     color: var(--trans-white);
-    padding-bottom: 1.5em;
+    padding-bottom: 5em;
     line-height: 1.5em;
   }
 
@@ -62,7 +62,7 @@ img {
   .main-container {
       display: flex;
       flex-direction: column;
-      max-width: 90%;
+      max-width: 60%;
   }
 
   .main-container .card {
