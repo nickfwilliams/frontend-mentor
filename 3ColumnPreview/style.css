@@ -1,0 +1,122 @@
+:root {
+    --sedan-orange: hsl(31, 77%, 52%);
+    --suv-cyan: hsl(184, 100%, 22%);
+    --luxury-cyan: hsl(179, 100%, 13%);
+    --trans-white: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+}
+
+/* universal styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+img {
+    display: block;
+    padding-bottom: 1.7em;
+}
+
+  /* typography */
+
+  h2 {
+      font-family: 'Big Shoulders Display', cursive;
+      font-size: 2em;
+      color: var(--light-gray);
+      text-transform: uppercase;
+      padding-bottom: 0.8em;
+  }
+
+  p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    color: var(--trans-white);
+    padding-bottom: 1.5em;
+    line-height: 1.5em;
+  }
+
+  /* layout */
+
+  body {
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+  }
+
+  .main-container {
+      display: flex;
+      flex-direction: column;
+      max-width: 90%;
+  }
+
+  .main-container .card {
+      padding: 2em 3.25em;
+  }
+
+  /* card styling */
+
+  .card__sedans {
+      background-color: var(--sedan-orange);
+      border-radius: 6px 6px 0 0;
+  }
+
+  .card__suvs {
+    background-color: var(--suv-cyan);
+  }
+
+  .card__luxury {
+    background-color: var(--luxury-cyan);
+    border-radius: 0 0 6px 6px;
+  }
+
+  /* button */
+
+.button-link {
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--light-gray);
+    display: block;
+    color: #000;
+    width: 150px;
+    padding: 1em;
+    border-radius: 30px;
+    text-decoration: none;
+    mix-blend-mode: screen;
+    text-align: center;
+}
+
+.button-link:hover {
+    mix-blend-mode: normal;
+    background: transparent;
+    box-shadow: inset 0 0 0 2px rgba(255,255,255);
+    color: white;
+}
+
+/* media queries */
+
+@media screen and (min-width: 800px) {
+    .main-container {
+        flex-direction: row;
+    }
+
+    .card__sedans {
+        border-radius: 6px 0 0 6px;
+    }
+
+    .card__luxury {
+        border-radius: 0 6px 6px 0;
+      }
+
+}
