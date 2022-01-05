@@ -74,7 +74,7 @@ p {
 }
 
 a {
-    color: color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 100%);
     text-decoration: none;
 }
 
@@ -124,7 +124,7 @@ a:hover {
         height: 100%;
         border-radius: 7px;
         background-color: hsl(178, 100%, 50%, 0.5);
-        background-image: url(/images/icon-view.svg);
+        background-image: url(/Users/nick/Websites/frontend-mentor/NFTPreview/images/icon-view.svg);
         background-position: center;
         background-repeat: no-repeat;
         opacity: 0;
