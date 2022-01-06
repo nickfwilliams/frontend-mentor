@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/nickfwilliams/frontend-mentor/tree/master/SinglePriceComponent)
+- Live Site URL: [Add live site URL here](https://fem-single-price-component.vercel.app/)
 
 ## My process
 
@@ -41,62 +41,46 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This was my first grid project and once I refreshed the basics, coding the desktop version wasn't difficult. It did raise a few questions about correct fraction use but I referred to the example image and think I've got a pretty decent match. I've included the CSS below, purely because it's the first grid I've written for a project.
 
 To see how you can add code snippets, see below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+@media only screen and (min-width: 1000px)
+    {
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+        .main-container {
+            max-width: 600px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1.8fr 2.2fr;
+        }
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+        .community {
+            grid-column: 1 / 3;
+        }
+```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I think the next project needs to be more challenging from a grid perspective. Everything else sees to be slowly improving but I need to make sure my flexbox and grid understanding is sharp before I go back to tussling with Javascript.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Example resource 1](https://css-tricks.com/snippets/css/complete-guide-grid/) - Where would we be without the css-trick complete guides!?
+- [Example resource 2](https://stackoverflow.com/questions/62056294/github-folders-have-a-white-arrow-on-them) - This thread was really useful in helping me unpick nesting folders in Github.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [Nick Williams](https://www.nickfwilliams.co.uk)
+- Frontend Mentor - [@nickfwilliams](https://www.frontendmentor.io/profile/nickfwilliams)
+- Twitter - [@nickfwilliams](https://www.github.com/nickfwilliams)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+No immediate acknowledgements needed for this solution, except a general shoutout to the FEM community!
