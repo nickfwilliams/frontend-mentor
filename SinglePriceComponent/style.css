@@ -39,6 +39,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 50px;
 }
 
 .main-container {
@@ -74,7 +75,7 @@ ul, li {
 
 .community {
     background-color: hsl(100, 100%, 100%);
-    padding: 1.5em;
+    padding: 2em;
     color: var(--grey-blue);
     border-radius: 8px 8px 0 0;
 }
@@ -91,7 +92,7 @@ ul, li {
 
 .subscription {
     background-color: var(--cyan);
-    padding: 1.5em;
+    padding: 2em;
 }
 
 .subscription p {
@@ -127,7 +128,7 @@ ul, li {
 
 .why-us {
     background-color: var(--light-cyan);
-    padding: 1.5em;
+    padding: 2em;
     border-radius: 0 0 8px 8px;
     font-size: 0.95em;
 }
