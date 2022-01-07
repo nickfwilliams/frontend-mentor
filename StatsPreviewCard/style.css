@@ -1,0 +1,113 @@
+/* universal styles */
+
+:root {
+    --main-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+    --main-heading: hsl(0, 0%, 100%);
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    position: relative;
+    border-radius: 8px 8px 0 0;
+}
+
+.img-overlay {
+    position: relative;
+}
+
+  .img-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(273, 72%, 39%, 0.562);
+    border-radius: 8px 8px 0 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-background);
+    font-family: 'Inter', sans-serif;
+    color: var(--main-heading);
+    font-size: 15px;
+    padding: 30px;
+}
+
+.main-container {
+    background-color: var(--card-background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    max-width: 350px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* sub-title and text */
+
+.text-area {
+    padding: 2em;
+}
+
+.main-title {
+    padding-bottom: 0.5em;
+}
+
+.tag-line {
+    padding-bottom: 2em;
+    color: var(--main-paragraph);
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+/* stats card */
+
+.stats-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats-numbers {
+    font-size: 1.5em;
+    font-weight: 700;
+    padding-bottom: 1em;
+}
+
+.stats-words {
+    display: block;
+    font-family: 'Lexend Deca', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.5em;
+    color: var(--main-paragraph);
+    padding-top: 0.5em;
+}
