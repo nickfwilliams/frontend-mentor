@@ -26,25 +26,17 @@
     width: 1px;
   }
 
-  img {
-    display: block;
-    max-width: 100%;
-    position: relative;
-    border-radius: 8px 8px 0 0;
-}
+/* main styles */
 
-.img-overlay {
-    position: relative;
-}
-
-  .img-overlay::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+/* empty div for image */
+#main-image {
+    background-image:url("/images/image-header-mobile.jpg");
+    background-color: hsla(277, 64%, 61%, 0.842);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
-    height: 100%;
-    background-color: hsla(273, 72%, 39%, 0.562);
+    height: 225px;
     border-radius: 8px 8px 0 0;
 }
 
@@ -90,7 +82,7 @@ body {
     color: var(--accent);
 }
 
-/* stats card */
+/* stats grid */
 
 .stats-card {
     display: flex;
@@ -110,4 +102,32 @@ body {
     font-size: 0.5em;
     color: var(--main-paragraph);
     padding-top: 0.5em;
+}
+
+/* media queries */
+
+@media screen and (min-width: 800px) {
+    .main-container {
+        flex-direction: row-reverse;
+        max-width: 800px;
+        text-align: left;
+    }
+
+    .tag-line {
+        padding-bottom: 4em;
+    }
+
+    .stats-card {
+        flex-direction: row;
+        gap: 50px;
+    }
+
+/* background-image replaces main image in div with desktop version */
+
+    #main-image {
+        background-image:url("/images/image-header-desktop.jpg");
+        border-radius: 0 8px 8px 0;
+        height: 310px;
+        width: 1000px;
+    }
 }
