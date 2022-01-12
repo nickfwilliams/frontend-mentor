@@ -70,12 +70,14 @@ body {
 }
 
 .main-title {
+    font-size: 2em;
     padding-bottom: 0.5em;
 }
 
 .tag-line {
-    padding-bottom: 2em;
+    padding: 0 3em 2em 0;
     color: var(--main-paragraph);
+    line-height: 1.5em;
 }
 
 .highlight {
@@ -127,7 +129,7 @@ body {
     #main-image {
         background-image: url("images/image-header-desktop.jpg");
         border-radius: 0 8px 8px 0;
-        height: 310px;
+        height: 350px;
         width: 1000px;
     }
 }
