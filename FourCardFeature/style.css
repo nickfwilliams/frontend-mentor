@@ -39,7 +39,6 @@
   }
 
   .main-container {
-      /* border: 1px solid red; */
       width: 375px;
       background-color: white;
       padding: 4em 0;
@@ -48,7 +47,6 @@
 /* title and sub-title */
 
 .intro {
-    /* border: 1px solid #000; */
     text-align: center;
     padding: 0 2.2em 4em 2.2em;
 }
@@ -64,16 +62,14 @@
 }
 
 .intro-text {
-    font-weight: 200;
+    font-weight: 400;
     font-size: 1em;
     font-size: 0.9em;
 }
 
-
 /* card section */
 
   .card-container {
-      /* border: 1px solid #000; */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -95,6 +91,7 @@
       height: 64px;
       width: 64px;
       align-self: flex-end;
+      margin-right: 1em;
   }
 
   .card-title {
@@ -105,8 +102,8 @@
   .card-text {
       font-size: 0.8em;
       padding-right: 3em;
-      padding-bottom: 4.5em;
-      line-height: 2em;
+      padding-bottom: 3em;
+      line-height: 2em;;
   }
 
   /* coloured bars */
@@ -119,10 +116,56 @@
     border-top:5px solid var(--team-builder-red);
 }
 
-.karma {
+    .karma {
     border-top:5px solid var(--karma-orange);
 }
 
-.calculator {
+    .calculator {
     border-top:5px solid var(--calculator-blue);
+}
+
+/* media queries */
+
+@media only screen and (min-width: 800px) {
+    body {
+        background-color: white;
+    }
+
+    .main-container {
+        width: 1000px;
+    }
+
+    .style-bold {
+        display: block;
+    }
+
+    .intro-text {
+        padding: 0 19em;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+
+    .card {
+        max-width: 300px;
+    }
+
+    .supervisor {
+        grid-row: 1/3;
+    }
+
+    .team-builder {
+        grid-row: 1/2;
+    }
+
+    .calculator {
+        grid-row: 1/3;
+    }
+
+    .karma {
+        grid-row: 2/3;
+    }
 }
