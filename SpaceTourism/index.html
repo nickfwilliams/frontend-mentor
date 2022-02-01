@@ -105,23 +105,43 @@
             
             <!-- navigation -->
             <div>
-                
+                <nav>
+                    <ul class="primary-navigation underline-indicators flex">
+                        <li class="active"><a class="fs-300 ff-sans-cond text-white letter-spacing-2 uppercase" href="#"><span>00</span>Active</a>
+                        <li><a class="fs-300 ff-sans-cond text-white letter-spacing-2 uppercase" href="#"><span>01</span>Hovered</a>
+                        <li><a class="fs-300 ff-sans-cond text-white letter-spacing-2 uppercase" href="#"><span>02</span>Idle</a>
+                    </ul>
+                </nav>
             </div>
             
             <div class="flex">
-                <div style="margin-top: 5rem; margin-left: 5rem;">
+                <div style="margin-top: 5rem;">
                     <!-- explore button -->
                     <a href="#"" class="large-button ff-serif uppercase fs-600 letter-spacing-2 text-dark bg-white">Explore</a>
                 </div>
                 
-                <div style="margin-bottom: 80vh;">
+                <div class="flow" style="margin-bottom: 80vh; --flow-space: 3rem;">
                     <!-- Tabs -->
-                    
+                    <div class="tab-list underline-indicators flex">
+                        <button aria-selected="true" class="text-accent uppercase fs-300 ff-sans-cond letter-spacing-2 bg-dark">Moon</button>
+                        <button aria-selected="false" class="text-accent uppercase fs-300 ff-sans-cond letter-spacing-2 bg-dark">Mars</button>
+                        <button aria-selected="false" class="text-accent uppercase fs-300 ff-sans-cond letter-spacing-2 bg-dark">Europa</button>
+                    </div>
                     
                     <!-- Dots -->
-                    
+                    <div class="dot-indicators flex">
+                        <button aria-selected="true"><span class="sr-only">Tab title</span></button>
+                        <button aria-selected="false"><span class="sr-only">Tab title</span></button>
+                        <button aria-selected="false"><span class="sr-only">Tab title</span></button>
+                    </div>
                     
                     <!-- Numbers -->
+                    <div class="numbers flex" style="--gap: 2rem;">
+                        <button aria-selected="true" class="fs-500 ff-serif bg-dark text-white">1</button>
+                        <button aria-selected="false" class="fs-500 ff-serif bg-dark text-white">2</button>
+                        <button aria-selected="false" class="fs-500 ff-serif bg-dark text-white">3</button>
+                    </div>
+
                 </div>
             </div>
             
