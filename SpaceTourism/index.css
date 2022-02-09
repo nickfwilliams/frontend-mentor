@@ -92,6 +92,8 @@ body {
 
     display: grid;
     grid-template-rows: min-content 1fr;
+
+    overflow-x: hidden;
 }
 
 /* Make images easier to work with */
@@ -153,7 +155,6 @@ select {
 }
 
 .grid-container {
-    border: 2px solid lime;
     display: grid;
     text-align: center;
     place-items: center;
@@ -211,6 +212,21 @@ select {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap; /* added line */
     border: 0;
+}
+
+.skip-to-content {
+    position: absolute;
+    z-index: 9999;
+    background: hsl( var(--clr-white) );
+    color: hsl( var(--clr-dark) );
+    padding: .5em 1em;
+    margin-inline: auto;
+    transform: translateY(-100%);
+    transition: transform .25s ease-in;
+}
+
+.skip-to-content:focus {
+    transform: translateY(0);
 }
 
 /* Colours */
@@ -300,23 +316,124 @@ select {
     opacity: 1;
     transform: scale(1.5);
     }
-    
+/* Primary header */
+
+.logo {
+    margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.primary-header {
+    justify-content: space-between;
+    align-items: center;
+}
+
 .primary-navigation {
-    --gap: 4rem;
-    --underline-gap: 2rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+        --gap: clamp(1.5rem, 5vw, 3.5rem);
+        --underline-gap: 2rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background: hsl( var(--clr-dark) / .95 );
+        backdrop-filter: blur(1.5rem);
+    }
+
+    .primary-navigation a {
+        text-decoration: none;
+    }
+    
+    .primary-navigation a > span {
+        margin-right: .5em;
+        font-weight: 700;
+        color: hsl( var(--clr-white) / 1);
+    }
+
+.mobile-nav-toggle {
+    display: none;
 }
 
-.primary-navigation a {
-    text-decoration: none;
+@supports (backdrop-filter: blur(1.5rem)) {
+    .primary-navigation {
+        background: hsl( var(--clr-white) / .05 );
+        backdrop-filter: blur(1.5rem);
+    }
 }
 
-.primary-navigation a > span {
-    margin-right: .5em;
-    font-weight: 700;
-    color: hsl( var(--clr-white) / 1);
+@media (max-width: 35rem) {
+    .primary-navigation {
+        --underline-gap: .5rem;
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        list-style: none;
+        padding: min(15rem, 10vh) 2rem;
+        margin: 0;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 500ms ease-in-out;
+    }
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0);
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url(./assets/shared/icon-close.svg);
+    }
+
+    .mobile-nav-toggle:focus-visible {
+        outline: 5px solid white;
+        outline-offset: 5px;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        right: 1rem;
+        top: 2rem;
+        background: transparent;
+        border: 0;
+        background-image: url(./assets/shared/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        width: 1.5em;
+        aspect-ratio: 1;
+        position: center;
+    }
+}
+
+@media (min-width: 35em) {
+    .primary-navigation {
+        padding-inline: clamp(3rem, 7vw, 7rem);
+    }
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+
+    .primary-navigation a > span {
+        display: none;
+    }
+}
+
+@media (min-width: 45em) {
+
+     .primary-header::after {
+        content: '';
+        display:block;
+        position: relative;
+        height: 1px;
+        width: 100%;
+        background: hsl( var(--clr-white) / .25 );
+        order: 1;
+        margin-right: -2.5rem;
+     }
+
+     nav {
+         order: 2;
+     }
+
+    .primary-navigation {
+        margin-block: 2rem;
+    }
 }
 
 .underline-indicators > * {
@@ -326,15 +443,22 @@ select {
     border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
 }
 
-.underline-indicators > *:hover, 
 .underline-indicators > *:focus {
-    border-color:hsl( var(--clr-white) / .55);
+    border-color:hsl( var(--clr-white) / .5);
 }
 
-.underline-indicators > .active,
-.underline-indicators > [aria-selected="true"] {
-    color: hsl( var(--clr-white) / 1 );
-    border-color: hsl( var(--clr-white) / 1 );
+@media (hover: hover) {
+    .underline-indicators > *:hover{
+        border-color: hsl( var(--clr-white) / .5);
+    }
+}
+
+@media (min-width: 35rem) {
+    .underline-indicators > .active,
+    .underline-indicators > [aria-selected="true"] {
+        color: hsl( var(--clr-white) / 1);
+        border-color: hsl( var(--clr-white) / 1); 
+    }
 }
 
 .tab-list {
