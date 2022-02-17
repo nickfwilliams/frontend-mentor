@@ -86,7 +86,7 @@ p {
 body {
     font-family: var(--ff-sans-normal);
     font-size: var(--fs-400);
-    color: hsl( var(--clr-white) );
+    color: hsl( var(--clr-light) );
     background-color: hsl( var(--clr-dark) );
     line-height: 1.5;
     min-height: 100vh;
@@ -160,15 +160,15 @@ select {
 }
 
 .sr-only {
-  position: absolute; 
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px; 
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap; /* added line */
-  border: 0;
+    position: absolute; 
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px; 
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
 }
 
 .skip-to-content {
@@ -419,7 +419,7 @@ select {
     padding: .5em;
     background-color: hsl( var(--clr-white) / .25);
 }
- 
+
 .dot-indicators > *:hover,
 .dot-indicators > *:focus { 
     background-color: hsl( var(--clr-white) / .5);
@@ -429,6 +429,27 @@ select {
     background-color: hsl( var(--clr-white) / 1); 
 }
 
+.numbers > * {
+    cursor: pointer;
+    border: 1px solid hsl( var(--clr-white) / .25);
+    border-radius: 50%;
+    padding: .5em;
+    aspect-ratio: 1;
+    position: relative;
+    display: inline-grid;
+    place-items: center;
+    padding: 0 1em;
+}
+
+.numbers > *:hover,
+.numbers > *:focus { 
+    border-color: hsl( var(--clr-white) / 1);
+}
+
+.numbers > [aria-selected="true"] {
+    background-color: hsl( var(--clr-white) / 1);
+    color: hsl( var(--clr-dark) ); 
+}
 
 /* ----------------------------- */
 /* Page specific background      */
@@ -475,7 +496,8 @@ body {
 
 /* crew */
 .crew {
-    background-image: url(./assets/home/background-crew-mobile.jpg);
+    position: top center;
+    background-image: url(./assets/crew/background-crew-mobile.jpg);
 }
 
 @media (min-width: 35rem) {
@@ -488,6 +510,22 @@ body {
 @media (min-width: 45rem) {
     .crew {
         background-image: url(./assets/crew/background-crew-desktop.jpg);
+    }
+} 
+
+.technology {
+    background-image: url(./assets/technology/background-technology-mobile.jpg);
+}
+
+@media (min-width: 35rem) {
+    .technology {
+        background-image: url(./assets/technology/background-technology-tablet.jpg);
+    }
+}
+
+@media (min-width: 45rem) {
+    .technology {
+        background-image: url(./assets/technology/background-technology-desktop.jpg);
     }
 } 
 
@@ -603,7 +641,7 @@ body {
         text-align: left;
         column-gap: var(--container-gap, 2rem);
         grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
-    }
+        }
     
     .grid-container--home {
         padding-bottom: max(6rem, 20vh);
@@ -627,7 +665,7 @@ body {
             '. image content .';
     }
     
-    .grid-container--destination > picture
+    .grid-container--destination > picture {
         max-width: 90%;
     }
 
@@ -649,4 +687,79 @@ body {
         grid-column: span 2;
         align-self: end;
         max-width: 100%;
+    }
+
+    /* Technology layout */
+
+    .grid-container--technology {
+        --flow-space: 1.5rem;
+        grid-template-areas: 
+            'title'
+            'image'
+            'tabs'
+            'content';
+    }
+
+    .grid-container--technology > picture {
+        grid-area: image;
+        align-self: center;
+    }
+    
+    .grid-container--technology > .numbers {
+        grid-area: tabs;
+    }
+    
+    .grid-container--technology > .technology-details {
+        grid-area: content;
+    }
+
+    @media (min-width: 35em) {
+        .numbered-title {
+            margin: 2rem 0;
+        }
+
+        .numbers {
+            margin-top: 2rem;
+        }
+    }
+
+        .grid-container--technology {
+            padding-bottom: 0;
+            grid-template-areas: 
+                'title'
+                'image'
+                'tabs'
+                'content';  
+        }
+
+
+    @media (min-width: 45em) {
+
+        .grid-container--technology picture {
+            content: url(./assets/technology/image-launch-vehicle-portrait.jpg);
+        }
+
+        .grid-container--technology {
+            grid-template-columns: minmax(1rem, 1fr) minmax(0, 7rem) minmax(0, 34rem) minmax(0, 20rem) minmax(1rem, 1fr);
+            justify-items: start;
+            align-items: center;
+            grid-template-areas: 
+                '. title title title .'
+                '. tabs content image .'
+                '. tabs content image .'
+        }
+
+        .numbers {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .grid-container--technology > picture {
+            grid-column: 4/6;
+            margin-bottom: 2rem;
+        }
+
+        .numbered-title {
+            margin: 0;
+        }
     }
