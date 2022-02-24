@@ -551,6 +551,10 @@ body {
     grid-area: title;
 }
 
+.intro-text {
+    margin-top: 2rem;
+}
+
 /* destination layout */
 
 .grid-container--destination {
