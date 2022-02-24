@@ -252,6 +252,7 @@ select {
     border-radius: 50%;
     aspect-ratio: 1;
     text-decoration: none;
+    margin-top: 1.5em;
 }
 
 .large-button::after {
@@ -265,7 +266,7 @@ select {
     opacity: 0;
     transition: opacity 500ms linear, transform 750ms ease-in-out;
 }
- 
+
 .large-button:hover::after,
 .large-button:focus::after {
     opacity: 1;
@@ -599,7 +600,8 @@ body {
 
 .grid-container--crew > picture {
     grid-area: image;
-    max-width: 60%;
+    max-width: 85%;
+    align-self: end;
     border-bottom: 1px solid hsl( var(--clr-white) / .1);
 }
 
@@ -637,42 +639,43 @@ body {
 }
 
 @media (min-width: 45em) {
-    .grid-container {
-        text-align: left;
-        column-gap: var(--container-gap, 2rem);
-        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+        .grid-container {
+            text-align: left;
+            column-gap: var(--container-gap, 2rem);
+            grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+        }
+        
+        .grid-container--home {
+            padding-bottom: max(6rem, 20vh);
+            align-items: end;
+        }
+        
+        .grid-container--home > *:first-child {
+            grid-column: 2;
+        }
+
+        .grid-container--home > *:last-child {
+            grid-column: 3;
+        }
+        
+        .grid-container--destination {
+            justify-items: start;
+            align-content: start;
+            grid-template-areas: 
+                '. title title .'
+                '. image tabs .'
+                '. image content .';
+        }
+        
+        .grid-container--destination > picture {
+            max-width: 90%;
+        }
+
+        .destination-meta {
+            --gap: min(6vw, 6rem);
+            justify-content: start;
         }
     
-    .grid-container--home {
-        padding-bottom: max(6rem, 20vh);
-        align-items: end;
-    }
-    
-    .grid-container--home > *:first-child {
-        grid-column: 2;
-    }
-
-    .grid-container--home > *:last-child {
-        grid-column: 3;
-    }
-    
-    .grid-container--destination {
-        justify-items: start;
-        align-content: start;
-        grid-template-areas: 
-            '. title title .'
-            '. image tabs .'
-            '. image content .';
-    }
-    
-    .grid-container--destination > picture {
-        max-width: 90%;
-    }
-
-    .destination-meta {
-        --gap: min(6vw, 6rem);
-        justify-content: start;
-    }
     
     .grid-container--crew {
         grid-template-columns: minmax(1rem, 1fr)  minmax(0, 37rem) minmax(0, 23rem) minmax(1rem, 1fr);
@@ -683,13 +686,13 @@ body {
             '. tabs image .';
     }
     
-    .grid-container--crew > picture {
-        grid-column: span 2;
-        align-self: end;
-        max-width: 100%;
-    }
+}
 
     /* Technology layout */
+
+    .technology > .grid-container {
+        padding-inline: 0rem;
+    }
 
     .grid-container--technology {
         --flow-space: 1.5rem;
@@ -702,7 +705,6 @@ body {
 
     .grid-container--technology > picture {
         grid-area: image;
-        align-self: center;
     }
     
     .grid-container--technology > .numbers {
@@ -713,9 +715,13 @@ body {
         grid-area: content;
     }
 
+    .grid-container--technology #launch-image-portrait, #spaceport-image-portrait, #capsule-image-portrait{
+        display: none;
+    }
+
     @media (min-width: 35em) {
         .numbered-title {
-            margin: 2rem 0;
+            margin: 2rem;
         }
 
         .numbers {
@@ -723,24 +729,10 @@ body {
         }
     }
 
-        .grid-container--technology {
-            padding-bottom: 0;
-            grid-template-areas: 
-                'title'
-                'image'
-                'tabs'
-                'content';  
-        }
-
-
     @media (min-width: 45em) {
 
-        .grid-container--technology picture {
-            content: url(./assets/technology/image-launch-vehicle-portrait.jpg);
-        }
-
         .grid-container--technology {
-            grid-template-columns: minmax(1rem, 1fr) minmax(0, 7rem) minmax(0, 34rem) minmax(0, 20rem) minmax(1rem, 1fr);
+            grid-template-columns: minmax(1rem, 1fr) minmax(0, 7rem) minmax(10rem, 34rem) minmax(0, 20rem) minmax(1rem, 1fr);
             justify-items: start;
             align-items: center;
             grid-template-areas: 
@@ -748,6 +740,14 @@ body {
                 '. tabs content image .'
                 '. tabs content image .'
         }
+
+        .grid-container--technology #launch-image-landscape, #spaceport-image-landscape, #capsule-image-landscape {
+        display:none;
+    }
+
+        .grid-container--technology #launch-image-portrait, #spaceport-image-portrait, #capsule-image-portrait{
+        display:block;
+    }
 
         .numbers {
             display: flex;

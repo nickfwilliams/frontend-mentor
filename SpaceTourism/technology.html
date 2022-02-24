@@ -42,18 +42,44 @@
         <main id="main" class="grid-container grid-container--technology flow">
           <h1 class="numbered-title text-white"><span aria-hidden="true">03</span> Space launch 101</h1>
 
-          <picture id="vehicle-image">
-            <source srcset="assets/technology/image-launch-vehicle-landscape.jpg">
-            <img src="assets/technology/image-launch-vehicle-landscape.jpg" alt="the launch vehicle">
+           <!-- Pictures -->
+
+           <!-- Launch vehicle image-->
+
+          <picture id="launch-image">
+            <img id="launch-image-landscape" src="assets/technology/image-launch-vehicle-landscape.jpg" alt="the launch vehicle">
+            <img id="launch-image-portrait" src="assets/technology/image-launch-vehicle-portrait.jpg" alt="the launch vehicle">
           </picture>
 
-          <div class="numbers flex" style="--gap: 2rem;">
-            <button aria-selected="true" class="fs-500 ff-serif bg-dark text-white">1</button>
-            <button aria-selected="false" class="fs-500 ff-serif bg-dark text-white">2</button>
-            <button aria-selected="false" class="fs-500 ff-serif bg-dark text-white">3</button>
+          <!-- Space Capsule image-->
+
+          <picture id="capsule-image" hidden>
+            <img id="capsule-image-landscape" src="./assets/technology/image-space-capsule-landscape.jpg" alt="the space capsule">
+            <img id="capsule-image-portrait" src="./assets/technology/image-space-capsule-portrait.jpg" alt="the space capsule">
+          </picture>
+
+          <!-- Spaceport image-->
+
+          <picture id="spaceport-image" hidden>
+            <img id="spaceport-image-landscape" src="./assets/technology/image-spaceport-landscape.jpg" alt="the space port">
+            <img id="spaceport-image-portrait" src="./assets/technology/image-spaceport-portrait.jpg" alt="the space port">
+          </picture>
+
+          <!-- Numbers -->
+
+          <div class="numbers flex" style="--gap: 2rem;" role="tablist" aria-label="technology list">
+            <button aria-selected="true" class="fs-500 ff-serif bg-dark text-white" role="tab" tabindex="0" aria-controls="launch-vec-tab" data-image="launch-image">1</button>
+
+            <button aria-selected="false" class="fs-500 ff-serif bg-dark text-white" role="tab" tabindex="-1" aria-controls="capsule-tab" data-image="capsule-image">2</button>
+
+            <button aria-selected="false" class="fs-500 ff-serif bg-dark text-white" role="tab" tabindex="-1" aria-controls="port-tab" data-image="spaceport-image">3</button>
           </div>
 
-          <article class="technology-details flow">
+          <!-- Articles -->
+
+          <!-- Launch Vehicle -->
+
+          <article class="technology-details flow" id="launch-vec-tab" tabindex="0" role="tabpanel">
             <h2 class="uppercase ff-sans-cond text-accent fs-400 letter-spacing-2">The terminology...</h2>
             <p class="uppercase ff-serif fs-700 text-white">Launch vehicle</p>
 
@@ -61,6 +87,30 @@
             payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
             WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
             it's quite an awe-inspiring sight on the launch pad!</p>
+          </article>
+
+          <!-- Space Capsule -->
+
+          <article class="technology-details flow" id="capsule-tab" tabindex="0" role="tabpanel" hidden>
+            <h2 class="uppercase ff-sans-cond text-accent fs-400 letter-spacing-2">The terminology...</h2>
+            <p class="uppercase ff-serif fs-700 text-white">Space Capsule</p>
+
+            <p>A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
+              capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
+              you'll spend your time during the flight. It includes a space gym, cinema, 
+              and plenty of other activities to keep you entertained.</p>
+          </article>
+
+          <!-- Space Port -->
+
+          <article class="technology-details flow" id="port-tab" tabindex="0" role="tabpanel" hidden>
+            <h2 class="uppercase ff-sans-cond text-accent fs-400 letter-spacing-2">The terminology...</h2>
+            <p class="uppercase ff-serif fs-700 text-white">Spaceport</p>
+
+            <p>A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
+              by analogy to the seaport for ships or airport for aircraft. Based in the 
+              famous Cape Canaveral, our spaceport is ideally situated to take advantage 
+              of the Earth’s rotation for launch.</p>
           </article>
         
         </main>
