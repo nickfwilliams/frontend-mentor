@@ -183,6 +183,10 @@ body {
   }
 }
 
+.main-heading {
+  font-size: 2.5rem;
+}
+
 .main-image {
   grid-area: image;
 }
@@ -193,7 +197,7 @@ body {
 }
 
 .main-text {
-  padding-bottom: 1.25rem;
+  padding: 1.25rem 0;
 }
 
 @media (min-width: 45rem) {
@@ -209,11 +213,13 @@ body {
 
 .register-btn {
   background-color: hsl( var(--clr-white) );
+  font-family: var(--ff-heading);
   color: hsl( var(--clr-dark) );
   padding: 0.7em 5em;
   display: inline-block;
   border-radius: 25px;
   text-decoration: none;
+  box-shadow: -1px 10px 9px 1px rgba(0,0,0,0.22);
 }
 
 .register-btn:hover {
