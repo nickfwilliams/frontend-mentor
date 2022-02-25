@@ -162,9 +162,9 @@ body {
     grid-template-columns: repeat(2, 1fr);
     text-align: left;
     grid-template-areas: 
-      'logo .'
+      'logo logo'
       'image content'
-      'image shortcuts';
+      'shortcuts shortcuts';
   }
 }
 
@@ -177,12 +177,19 @@ body {
   grid-area: logo;
 }
 
+@media (min-width: 45rem) {
+  .logo {
+    max-width: 15%;
+  }
+}
+
 .main-image {
   grid-area: image;
 }
 
 .main-info {
   grid-area: content;
+  padding-top: 2rem;
 }
 
 .main-text {
