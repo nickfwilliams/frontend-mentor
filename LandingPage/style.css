@@ -142,7 +142,8 @@ body {
     max-width: 42rem;
     margin-inline: auto;
     text-align: center;
-    gap: 2rem;
+    column-gap: 2rem;
+    row-gap: 3rem;
     padding: 2em 2em;
     grid-template-areas: 
       'logo'
@@ -172,14 +173,14 @@ body {
 /* Images              */
 /* ------------------- */
 
-.logo {
-  max-width: 30%;
+.logo-grid-area {
   grid-area: logo;
+  max-width: 40%;
 }
 
 @media (min-width: 45rem) {
-  .logo {
-    max-width: 15%;
+.logo {
+    max-width: 40%;
   }
 }
 
@@ -187,13 +188,13 @@ body {
   font-size: 2.5rem;
 }
 
-.main-image {
+.image-grid-area {
   grid-area: image;
 }
 
-.main-info {
+.info-grid-area {
   grid-area: content;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
 }
 
 .main-text {
@@ -238,12 +239,13 @@ body {
 /* Shortcuts           */
 /* ------------------- */
 
-.shortcuts {
+.shortcut-grid-area {
   grid-area: shortcuts;
+  padding-bottom: 3em;
 }
 
 @media (min-width: 45rem) {
-  .shortcuts {
+  .shortcut-grid-area {
     place-self: end;
   }
 }
