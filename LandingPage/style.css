@@ -149,19 +149,20 @@ body {
       'logo'
       'image'
       'content' 
-      'shortcuts'; 
+      'shortcuts';
 }
 
 @media (min-width: 45rem) {
   body {
     background-image: url(./images/bg-desktop.svg);
-    background-size: cover;  
+    background-size: cover;
   }
 
   .grid-container {
     max-width: 80rem;
     grid-template-columns: repeat(2, 1fr);
     text-align: left;
+    min-height: 100%;
     grid-template-areas: 
       'logo logo'
       'image content'
