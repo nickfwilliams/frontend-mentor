@@ -166,6 +166,7 @@ body {
 
   .container {
     max-width: 1440px;
+    height: 100vh;
     padding: 5rem 3rem;
     display: grid;
     gap: 3rem;
