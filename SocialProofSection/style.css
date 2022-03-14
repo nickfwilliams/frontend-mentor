@@ -1,0 +1,246 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Universal Styles */
+
+:root {
+  /* Colours */
+
+  --dark-neutral: hsl(303, 10%, 53%);
+  --light-neutral: hsl(300, 24%, 96%);
+
+  --dark-accent: hsl(300, 43%, 22%);
+  --light-accent: hsl(333, 80%, 67%);
+
+  --white: hsl(0, 0%, 100%);
+}
+
+/* Component Styles */
+
+.bold {
+  font-weight: 500;
+}
+
+.bolder {
+  font-weight: 700;
+}
+
+.break {
+  display: block;
+}
+
+body {
+  background-color: var(--light-neutral);
+  font-family: spartan, sans-serif;
+  display: flex;
+  justify-content: center;
+  font-size: 0.9375rem;
+}
+
+/* Layout */
+
+.container {
+  background-color: var(--white);
+  background-image: url(./images/bg-pattern-top-mobile.svg),
+    url(./images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top, bottom;
+  max-width: 375px;
+  padding: 3rem 1.25rem;
+  text-align: center;
+}
+
+/* Page Content*/
+
+.header__title {
+  color: var(--dark-accent);
+  line-height: 2.5rem;
+  padding: 0rem 1rem 1rem 1rem;
+  width: 20rem;
+}
+
+.header__intro {
+  color: var(--dark-neutral);
+  margin-bottom: 2rem;
+}
+
+/* Reviews */
+
+.reviews {
+  margin-bottom: 3rem;
+}
+
+.reviews img {
+  display: inline-block;
+  padding-bottom: 0.4rem;
+}
+
+.review {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--light-neutral);
+}
+
+.review__text {
+  font-weight: bolder;
+  color: var(--dark-accent);
+}
+
+/* Testimonials */
+
+.testimonial {
+  background-color: var(--dark-accent);
+  color: var(--light-neutral);
+  margin-bottom: 1rem;
+  padding: 2.5rem;
+  text-align: left;
+  border-radius: 8px;
+}
+
+.testimonial__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial__header span {
+  color: var(--light-accent);
+}
+
+.testimonial__header img {
+  border-radius: 50px;
+  width: 50px;
+  margin-right: 1.5rem;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+    align-items: center;
+  }
+
+  .container {
+    max-width: 1440px;
+    padding: 5rem 3rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1.2fr 2fr;
+    grid-template-rows: 1.5fr 2fr;
+    grid-template-areas:
+      "intro reviews"
+      "testimonials testimonials";
+    background-image: url(./images/bg-pattern-top-desktop.svg),
+      url(./images/bg-pattern-bottom-desktop.svg);
+    background-position: top left, bottom right;
+  }
+
+  .intro-section {
+    text-align: left;
+  }
+
+  .header__title {
+    padding: 0rem;
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .reviews {
+    grid-area: reviews;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 0rem;
+    margin-bottom: 0rem;
+    height: 100%;
+  }
+
+  .review {
+    display: flex;
+    margin-bottom: 0rem;
+    /* width: 60%; */
+  }
+
+  .review-1 {
+    transform: translateX(-50px);
+  }
+
+  .review-3 {
+    transform: translateX(50px);
+    margin-right: 1rem;
+  }
+
+  .review img {
+    margin-right: 0.5rem;
+    align-self: center;
+  }
+
+  .review__text {
+    margin-left: 1rem;
+  }
+
+  .testimonials {
+    grid-area: testimonials;
+    display: flex;
+    gap: 1.5em;
+    padding: 2rem 0;
+  }
+
+  .testimonial {
+    height: auto;
+  }
+
+  .testimonial-1 {
+    transform: translateY(-25px);
+  }
+
+  .testimonial-3 {
+    transform: translateY(25px);
+  }
+}
