@@ -41,8 +41,8 @@
 body {
     background-color: hsl( var(--main-bg) );
     background-image: 
-        url('/images/bg-pattern-bottom.svg'), 
-        url('/images/bg-pattern-top.svg');
+        url('./images/bg-pattern-bottom.svg'), 
+        url('./images/bg-pattern-top.svg');
     background-repeat: no-repeat, no-repeat;
     background-size: contain, contain;
     background-position: bottom -200px right -200px, top -200px left -200px;
