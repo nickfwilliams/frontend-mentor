@@ -1,0 +1,130 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+:root {
+
+/* Colours */
+
+--main-bg: 185 75% 39%;
+--dark-text: 229 23% 23%;
+--dark-grey-blue: 227 10% 46%;
+--dark-grey: 0 0% 59%
+
+}
+
+body {
+    background-color: hsl( var(--main-bg) );
+    background-image: 
+        url('/images/bg-pattern-bottom.svg'), 
+        url('/images/bg-pattern-top.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+    background-position: bottom -200px right -200px, top -200px left -200px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Kumbh Sans, sans-serif, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (min-width: 700px) {
+    body {
+        background-size: 50%;
+        background-position: bottom -350px right -100px, top -350px left -100px;
+    }
+}
+
+/* Container card */
+
+.card {
+    background-color: #fff;
+    max-width: 375px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+}
+
+/* User profile details */
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-35px);
+    color: hsl( var(--dark-text) );
+    gap: .25em;
+}
+
+.card-details__age {
+    margin-left: .1em;
+}
+
+.card-details__age, .card-details__location {
+    color: hsl( var(--dark-grey-blue) );
+}
+
+.card-details__location {
+    font-size: .8em;
+    font-weight: 400;
+}
+
+/* Stats & Numbers */
+
+.card-stats {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: auto;
+    padding: 1.5em 1em;
+    border-top: 1px solid rgb(222, 222, 222);
+    color: hsl( var(--dark-text) );
+}
+
+.card-stats span {
+    display: block;
+    color: hsl( var(--dark-grey) );
+    font-size: .7rem;
+    letter-spacing: .1rem;
+}
+
+/* Images */
+
+.card__image.pattern {
+    border-radius: 10px 10px 0 0;
+}
+
+.card__image.profile {
+    border-radius: 50px;
+    border: 5px solid white;
+    transform: translateY(-55px);
+}
