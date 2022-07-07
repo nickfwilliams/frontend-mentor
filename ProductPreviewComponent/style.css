@@ -1,0 +1,210 @@
+/* A Modern CSS Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+:root {
+    /* Colours */
+
+    --color-primary: hsl(158, 36%, 37%);
+    --color-active: hsl(158, 37%, 19%);
+    --color-secondary: hsl(30, 38%, 92%);
+    --color-blue-1: hsl(212, 21%, 14%);
+    --color-blue-2: hsl(228, 12%, 48%);
+    --color-white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 2rem;
+}
+
+.main-container {
+    background-color: var(--color-white);
+    flex-direction: column;
+    width: 90%;
+    border-radius: 10px;
+}
+
+/* Image Section */
+
+.main-image {
+    border-radius: 10px 10px 0 0;
+    min-width: 100%;
+}
+
+/* Text section */
+
+.main-info {
+    padding: 1.5rem;
+}
+
+.main-info > * {
+    padding-block: 0.5rem;
+}
+
+h1 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.5rem;
+    color: var(--color-blue-2);
+
+}
+
+h2, .main-price {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    line-height: 2.1rem;
+}
+
+.main-text {
+    color: var(--color-blue-2);
+    font-size: 14px;
+    padding-bottom: 2rem;
+    padding-right: 1rem;
+    line-height: 1.6rem;
+    max-width: 35ch;
+}
+
+/* Price section */
+
+.prices {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}
+
+.main-price {
+    color: var(--color-primary);
+    padding-right: 2rem;
+}
+
+.discount-price {
+    text-decoration: line-through;
+    color: var(--color-blue-2);
+}
+
+/* Button */
+
+.button-flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.4rem;
+}
+
+.cart-icon {
+    height: 15px;
+    padding-right: 0.6rem;
+}
+
+.main-btn {
+    display: flex;
+    justify-content: center;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.main-btn:hover {
+    background-color: var(--color-active);
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 600px) {
+    .main-container {
+        display: flex;
+        flex-direction: row;
+        max-width: 600px;
+    }
+
+    .main-image {
+        content: url(images/image-product-desktop.jpg);
+        min-width: 50%;
+        object-fit: cover;
+        border-radius: 10px 0 0 10px;
+    }
+}
