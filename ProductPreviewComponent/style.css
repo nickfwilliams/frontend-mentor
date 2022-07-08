@@ -179,11 +179,8 @@ h2, .main-price {
     border-radius: 10px;
     width: 100%;
     cursor: pointer;
+    padding: 0.8em;
     margin-bottom: 0.5rem;
-}
-
-.main-btn p {
-    padding: 0.3em;
 }
 
 .main-btn:hover {
