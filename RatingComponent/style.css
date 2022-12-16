@@ -1,3 +1,4 @@
+/* Resets */
 *,
 *::before,
 *::after {
@@ -7,7 +8,6 @@
 * {
   margin: 0;
   padding: 0;
-  font: inherit;
 }
 
 img,
@@ -23,4 +23,106 @@ textarea,
 button,
 select {
   font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Variables */
+
+:root {
+  /* Colors */
+  --main-bg-color: hsl(228, 11%, 9%);
+  --container-bg-color: hsl(215, 22%, 15%);
+  --hightlight-color: hsl(27, 96%, 52%);
+  --button-color: hsl(210, 19%, 18%);
+  --paragraph-color: hsl(217, 12%, 63%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: Overpass, sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--paragraph-color);
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  background-color: var(--container-bg-color);
+  max-width: 350px;
+  border-radius: 15px;
+  padding: 1.5em;
+  height: 390px;
+}
+
+.thankyou-section {
+  display: none;
+}
+
+.star-img-container {
+  background-color: var(--button-color);
+  display: block;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+.star-img {
+  width: 15px;
+  height: 15px;
+}
+
+.main-heading {
+  color: var(--white);
+  margin-bottom: 0.75em;
+}
+
+.main-text {
+  line-height: 1.3em;
+  margin-bottom: 1.75em;
+}
+
+.button-container {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.5em;
+}
+
+.button-container button {
+  color: var(--paragraph-color);
+  background-color: var(--button-color);
+  height: 45px;
+  width: 45px;
+  border: 0;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  font-size: 0.9rem;
+}
+
+.button-container button:hover {
+  background-color: var(--hightlight-color);
+  color: var(--white);
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: var(--hightlight-color);
+  color: var(--white);
+  border-radius: 25px;
+  padding-block: 0.75em;
+  text-transform: uppercase;
+}
+
+.submit-btn:hover {
+  background-color: var(--white);
+  color: var(--hightlight-color);
 }
