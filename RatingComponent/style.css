@@ -49,6 +49,7 @@ body {
   min-height: 100vh;
   justify-content: center;
   align-items: center;
+  font-size: 15px;
 }
 
 .main-container {
@@ -59,9 +60,9 @@ body {
   height: 390px;
 }
 
-.thankyou-section {
+/* .thankyou-section {
   display: none;
-}
+} */
 
 .star-img-container {
   background-color: var(--button-color);
@@ -113,6 +114,10 @@ body {
   color: var(--white);
 }
 
+.button-container button:active {
+  background-color: var(--paragraph-color);
+}
+
 .submit-btn {
   width: 100%;
   background-color: var(--hightlight-color);
@@ -125,4 +130,31 @@ body {
 .submit-btn:hover {
   background-color: var(--white);
   color: var(--hightlight-color);
+}
+
+/* Thank You Page Styles */
+
+.thankyou-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.thankyou-img {
+  margin-bottom: 1.5em;
+}
+
+.thankyou-selection {
+  background-color: var(--button-color);
+  padding-block: 0.5em;
+  padding-inline: 0.75em;
+  border-radius: 25px;
+  margin-bottom: 2em;
+  color: var(--hightlight-color);
+}
+
+.thankyou-text {
+  text-align: center;
+  line-height: 1.3em;
 }
