@@ -22,7 +22,7 @@ input,
 textarea,
 button,
 select {
-  font: inherit;
+  font-family: inherit;
 }
 
 button {
@@ -39,6 +39,8 @@ button {
   --button-color: hsl(210, 19%, 18%);
   --paragraph-color: hsl(217, 12%, 63%);
   --white: hsl(0, 0%, 100%);
+  --white-30: hsla(0, 0%, 100%, 0.3);
+  --form-control-color: rebeccapurple;
 }
 
 body {
@@ -73,7 +75,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  margin-bottom: 1em;
+  margin-bottom: 2.5em;
 }
 
 .star-img {
@@ -91,45 +93,101 @@ body {
   margin-bottom: 1.75em;
 }
 
-.button-container {
-  text-align: center;
+.select-btns {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 1.5em;
+  /* outline: 3px solid pink; */
+  justify-content: space-between;
+  margin-bottom: 2em;
+  position: relative;
 }
 
-.button-container button {
-  color: var(--paragraph-color);
+.form-control {
+  /* outline: 2px solid red; */
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
   background-color: var(--button-color);
-  height: 45px;
-  width: 45px;
-  border: 0;
+  margin: 0;
+  font: inherit;
+  /* color: red; */
+  width: 3em;
+  height: 3em;
+  /* border: 0.15em solid currentColor; */
   border-radius: 50%;
-  aspect-ratio: 1;
-  font-size: 0.9rem;
+  transform: translateY(-0.15em);
+  display: grid;
+  place-content: center;
 }
 
-.button-container button:hover {
+input[type="radio"]::before {
+  content: "";
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 3em 3em var(--white-30);
+}
+
+input[type="radio"]:hover {
   background-color: var(--hightlight-color);
-  color: var(--white);
+  color: white;
 }
 
-.button-container button:active {
-  background-color: var(--paragraph-color);
+input[type="radio"]:checked::before {
+  transform: scale(1);
 }
 
-.submit-btn {
-  width: 100%;
+.btn::before {
+  color: white;
+  position: absolute;
+  font-size: 1em;
+  top: 14px;
+  z-index: 1;
+}
+
+.btn1::before {
+  content: "1";
+  left: 21px;
+}
+
+.btn2::before {
+  content: "2";
+  left: 83px;
+}
+
+.btn3::before {
+  content: "3";
+  left: 148px;
+}
+
+.btn4::before {
+  content: "4";
+  left: 213px;
+}
+
+.btn5::before {
+  content: "5";
+  left: 277px;
+}
+
+input[type="submit"] {
   background-color: var(--hightlight-color);
-  color: var(--white);
+  border: 0;
   border-radius: 25px;
-  padding-block: 0.75em;
+  width: 100%;
+  padding-block: 1em;
   text-transform: uppercase;
-}
-
-.submit-btn:hover {
-  background-color: var(--white);
-  color: var(--hightlight-color);
+  color: var(--white);
+  letter-spacing: 0.25em;
 }
 
 /* Thank You Page Styles */
