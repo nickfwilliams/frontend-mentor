@@ -2,64 +2,64 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 img,
 picture,
 svg,
 video {
-  display: block;
-  max-width: 100%;
+	display: block;
+	max-width: 100%;
 }
 
 input,
 textarea,
 button,
 select {
-  font-family: inherit;
+	font-family: inherit;
 }
 
 button {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 /* Variables */
 
 :root {
-  /* Colors */
-  --main-bg-color: hsl(228, 11%, 9%);
-  --container-bg-color: hsl(215, 22%, 15%);
-  --hightlight-color: hsl(27, 96%, 52%);
-  --button-color: hsl(210, 19%, 18%);
-  --paragraph-color: hsl(217, 12%, 63%);
-  --white: hsl(0, 0%, 100%);
-  --white-30: hsla(0, 0%, 100%, 0.3);
-  --form-control-color: rebeccapurple;
+	/* Colors */
+	--main-bg-color: hsl(228, 11%, 9%);
+	--container-bg-color: hsl(215, 22%, 15%);
+	--hightlight-color: hsl(27, 96%, 52%);
+	--button-color: hsl(210, 19%, 18%);
+	--paragraph-color: hsl(217, 12%, 63%);
+	--white: hsl(0, 0%, 100%);
+	--white-30: hsla(0, 0%, 100%, 0.3);
+	--form-control-color: rebeccapurple;
 }
 
 body {
-  font-family: Overpass, sans-serif;
-  background-color: var(--main-bg-color);
-  color: var(--paragraph-color);
-  display: flex;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
-  font-size: 15px;
+	font-family: Overpass, sans-serif;
+	background-color: var(--main-bg-color);
+	color: var(--paragraph-color);
+	display: flex;
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+	font-size: 15px;
 }
 
 .main-container {
-  background-color: var(--container-bg-color);
-  max-width: 350px;
-  border-radius: 15px;
-  padding: 1.5em;
-  height: 390px;
+	background-color: var(--container-bg-color);
+	max-width: 350px;
+	border-radius: 15px;
+	padding: 1.5em;
+	height: 390px;
 }
 
 /* .thankyou-section {
@@ -67,159 +67,163 @@ body {
 } */
 
 .star-img-container {
-  background-color: var(--button-color);
-  display: block;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  margin-bottom: 2.5em;
+	background-color: var(--button-color);
+	display: block;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	margin-bottom: 2.5em;
 }
 
 .star-img {
-  width: 15px;
-  height: 15px;
+	width: 15px;
+	height: 15px;
 }
 
 .main-heading {
-  color: var(--white);
-  margin-bottom: 0.75em;
+	color: var(--white);
+	margin-bottom: 0.75em;
 }
 
 .main-text {
-  line-height: 1.3em;
-  margin-bottom: 1.75em;
+	line-height: 1.3em;
+	margin-bottom: 1.75em;
 }
 
 .select-btns {
-  display: flex;
-  /* outline: 3px solid pink; */
-  justify-content: space-between;
-  margin-bottom: 2em;
-  position: relative;
+	display: flex;
+	/* outline: 3px solid pink; */
+	justify-content: space-between;
+	margin-bottom: 2em;
+	position: relative;
 }
 
 .form-control {
-  /* outline: 2px solid red; */
-  font-size: 1rem;
-  font-weight: bold;
-  line-height: 1.1;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+	/* outline: 2px solid red; */
+	font-size: 1rem;
+	font-weight: bold;
+	line-height: 1.1;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
 }
 
 input[type="radio"] {
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: var(--button-color);
-  margin: 0;
-  font: inherit;
-  /* color: red; */
-  width: 3em;
-  height: 3em;
-  /* border: 0.15em solid currentColor; */
-  border-radius: 50%;
-  transform: translateY(-0.15em);
-  display: grid;
-  place-content: center;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: var(--button-color);
+	margin: 0;
+	font: inherit;
+	/* color: red; */
+	width: 3em;
+	height: 3em;
+	/* border: 0.15em solid currentColor; */
+	border-radius: 50%;
+	transform: translateY(-0.15em);
+	display: grid;
+	place-content: center;
 }
 
 input[type="radio"]::before {
-  content: "";
-  width: 3em;
-  height: 3em;
-  border-radius: 50%;
-  transform: scale(0);
-  transition: 120ms transform ease-in-out;
-  box-shadow: inset 3em 3em var(--white-30);
+	content: "";
+	width: 3em;
+	height: 3em;
+	border-radius: 50%;
+	transform: scale(0);
+	transition: 120ms transform ease-in-out;
+	box-shadow: inset 3em 3em var(--white-30);
 }
 
 input[type="radio"]:hover {
-  background-color: var(--hightlight-color);
-  color: white;
-  cursor: pointer;
+	background-color: var(--hightlight-color);
+	color: white;
+	cursor: pointer;
 }
 
 input[type="radio"]:checked::before {
-  transform: scale(1);
+	transform: scale(1);
 }
 
 .btn::before {
-  color: white;
-  position: absolute;
-  font-size: 1em;
-  top: 14px;
-  z-index: 1;
+	color: white;
+	position: absolute;
+	font-size: 1em;
+	top: 14px;
+	z-index: 1;
 }
 
 .btn1::before {
-  content: "1";
-  left: 21px;
+	content: "1";
+	left: 21px;
 }
 
 .btn2::before {
-  content: "2";
-  left: 83px;
+	content: "2";
+	left: 83px;
 }
 
 .btn3::before {
-  content: "3";
-  left: 147px;
+	content: "3";
+	left: 147px;
 }
 
 .btn4::before {
-  content: "4";
-  left: 213px;
+	content: "4";
+	left: 213px;
 }
 
 .btn5::before {
-  content: "5";
-  left: 277px;
+	content: "5";
+	left: 277px;
 }
 
 input[type="submit"] {
-  background-color: var(--hightlight-color);
-  border: 0;
-  border-radius: 25px;
-  width: 100%;
-  padding-block: 1em;
-  text-transform: uppercase;
-  color: var(--white);
-  letter-spacing: 0.25em;
+	background-color: var(--hightlight-color);
+	border: 0;
+	border-radius: 25px;
+	width: 100%;
+	padding-block: 1em;
+	text-transform: uppercase;
+	color: var(--white);
+	letter-spacing: 0.25em;
 }
 
 input[type="submit"]:hover {
-  background-color: var(--white);
-  color: var(--hightlight-color);
-  cursor: pointer;
+	background-color: var(--white);
+	color: var(--hightlight-color);
+	cursor: pointer;
 }
 
 /* Thank You Page Styles */
 
 .thankyou-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .thankyou-img {
-  margin-bottom: 1.5em;
+	margin-bottom: 1.5em;
 }
 
 .thankyou-selection {
-  background-color: var(--button-color);
-  padding-block: 0.5em;
-  padding-inline: 0.75em;
-  border-radius: 25px;
-  margin-bottom: 2em;
-  color: var(--hightlight-color);
+	background-color: var(--button-color);
+	padding-block: 0.5em;
+	padding-inline: 0.75em;
+	border-radius: 25px;
+	margin-bottom: 2em;
+	color: var(--hightlight-color);
 }
 
 .thankyou-text {
-  text-align: center;
-  line-height: 1.3em;
+	text-align: center;
+	line-height: 1.3em;
+}
+
+.hide-window {
+	display: none;
 }

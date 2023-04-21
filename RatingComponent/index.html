@@ -1,79 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
 
-    <!-- My Styles -->
-    <link rel="stylesheet" href="style.css" />
+		<!-- My Styles -->
+		<link rel="stylesheet" href="style.css" />
 
-    <title>Frontend Mentor | Interactive rating component</title>
-  </head>
-  <body>
-    <!-- Rating state start -->
+		<title>Frontend Mentor | Interactive rating component</title>
+	</head>
+	<body>
+		<!-- Rating state start -->
 
-    <div class="rating-section main-container">
-      <div class="star-img-container">
-        <img class="star-img" src="images/icon-star.svg" />
-      </div>
+		<div class="rating-section main-container">
+			<div class="star-img-container">
+				<img class="star-img" src="images/icon-star.svg" />
+			</div>
 
-      <h2 class="main-heading">How did we do?</h2>
-      <p class="main-text">
-        Please let us know how we did with your support request. All feedback is
-        appreciated to help us improve our offering!
-      </p>
+			<h2 class="main-heading">How did we do?</h2>
+			<p class="main-text">
+				Please let us know how we did with your support request. All feedback is
+				appreciated to help us improve our offering!
+			</p>
 
-      <form id="rating-form">
-        <div class="select-btns">
-          <label for="rating1" class="form-control btn btn1">
-            <input type="radio" id="rating1" name="rating" value="1" />
-          </label>
-          <label for="rating2" class="form-control btn btn2">
-            <input type="radio" id="rating2" name="rating" value="2" />
-          </label>
-          <label for="rating3" class="form-control btn btn3">
-            <input type="radio" id="rating3" name="rating" value="3" />
-          </label>
-          <label for="rating4" class="form-control btn btn4">
-            <input type="radio" id="rating4" name="rating" value="4" />
-          </label>
-          <label for="rating5" class="form-control btn btn5">
-            <input type="radio" id="rating5" name="rating" value="5" />
-          </label>
-        </div>
-        <input type="submit" value="Submit" class="sumbit-btn" />
-      </form>
-    </div>
+			<form id="rating-form">
+				<div class="select-btns">
+					<label for="rating1" class="form-control btn btn1">
+						<input type="radio" id="rating1" name="rating" value="1" />
+					</label>
+					<label for="rating2" class="form-control btn btn2">
+						<input type="radio" id="rating2" name="rating" value="2" />
+					</label>
+					<label for="rating3" class="form-control btn btn3">
+						<input type="radio" id="rating3" name="rating" value="3" />
+					</label>
+					<label for="rating4" class="form-control btn btn4">
+						<input type="radio" id="rating4" name="rating" value="4" />
+					</label>
+					<label for="rating5" class="form-control btn btn5">
+						<input type="radio" id="rating5" name="rating" value="5" />
+					</label>
+				</div>
+				<input id="submit" type="submit" value="Submit" class="sumbit-btn" />
+			</form>
+		</div>
 
-    <!-- Rating state end -->
+		<!-- Rating state end -->
 
-    <!-- Thank you state start -->
+		<!-- Thank you state start -->
 
-    <div class="thankyou-section main-container">
-      <img class="thankyou-img" src="images/illustration-thank-you.svg" />
+		<div class="thankyou-section main-container">
+			<img class="thankyou-img" src="images/illustration-thank-you.svg" />
 
-      <p class="thankyou-selection">
-        You selected
-        <span id="result"></span>out of 5
-      </p>
+			<p class="thankyou-selection">
+				You selected
+				<span id="result"></span>out of 5
+			</p>
 
-      <h2 class="main-heading">Thank you!</h2>
-      <p class="thankyou-text">
-        We appreciate you taking the time to give a rating. If you ever need
-        more support, don't hesitate to get in touch!
-      </p>
-    </div>
+			<h2 class="main-heading">Thank you!</h2>
+			<p class="thankyou-text">
+				We appreciate you taking the time to give a rating. If you ever need
+				more support, don't hesitate to get in touch!
+			</p>
+		</div>
 
-    <!-- Thank you state end -->
+		<!-- Thank you state end -->
 
-    <script src="script.js"></script>
-  </body>
+		<script src="script.js"></script>
+	</body>
 </html>
