@@ -30,22 +30,23 @@
         Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering!
       </p>
-      <form>
+
+      <form id="rating-form">
         <div class="select-btns">
-          <label class="form-control btn btn1">
-            <input type="radio" name="rating" value="1" />
+          <label for="rating1" class="form-control btn btn1">
+            <input type="radio" id="rating1" name="rating" value="1" />
           </label>
-          <label class="form-control btn btn2">
-            <input type="radio" name="rating" value="2" />
+          <label for="rating2" class="form-control btn btn2">
+            <input type="radio" id="rating2" name="rating" value="2" />
           </label>
-          <label class="form-control btn btn3">
-            <input type="radio" name="rating" value="3" />
+          <label for="rating3" class="form-control btn btn3">
+            <input type="radio" id="rating3" name="rating" value="3" />
           </label>
-          <label class="form-control btn btn4">
-            <input type="radio" name="rating" value="4" />
+          <label for="rating4" class="form-control btn btn4">
+            <input type="radio" id="rating4" name="rating" value="4" />
           </label>
-          <label class="form-control btn btn5">
-            <input type="radio" name="rating" value="5" />
+          <label for="rating5" class="form-control btn btn5">
+            <input type="radio" id="rating5" name="rating" value="5" />
           </label>
         </div>
         <input type="submit" value="Submit" class="sumbit-btn" />
@@ -60,7 +61,8 @@
       <img class="thankyou-img" src="images/illustration-thank-you.svg" />
 
       <p class="thankyou-selection">
-        You selected <span id="ratingSelected">X</span> out of 5
+        You selected
+        <span id="result"></span>out of 5
       </p>
 
       <h2 class="main-heading">Thank you!</h2>
