@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+:root {
+	--dark-grey: hsl(217, 19%, 35%);
+	--dark-blue: hsl(214, 17%, 51%);
+	--greyish-blue: hsl(212, 23%, 69%);
+	--light-greyish-blue: hsl(212, 23%, 69%);
+}
+
+body {
+	font-family: "Manrope", sans-serif;
+	font-size: 13px;
+	background-color: #f3f3f3;
+	color: var(--dark-grey);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	max-width: 375px;
+	background-color: white;
+	border-radius: 15px;
+
+	.card__img > img {
+		width: 100%;
+		height: 230px;
+		object-fit: cover;
+		object-position: 25% 25%;
+		border-radius: 15px 15px 0 0;
+	}
+
+	.card__text {
+		padding: 2.25em;
+		h2 {
+			margin-bottom: 0.8em;
+		}
+		p {
+			line-height: 1.7em;
+			color: var(--dark-blue);
+		}
+	}
+
+	.card__post-info {
+		display: flex;
+		align-items: center;
+		margin-top: 2em;
+
+		.author-photo img {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			margin-right: 1em;
+		}
+
+		.author-text {
+			span {
+				display: block;
+			}
+			.name {
+				font-weight: 700;
+			}
+			.date {
+				color: var(--light-greyish-blue);
+			}
+		}
+		.card__share-btn {
+			margin-right: 1em;
+			margin-left: auto;
+			background-color: #ecf2f7;
+			padding: 1em;
+			border-radius: 50%;
+			border: none;
+			cursor: pointer;
+		}
+	}
+}
+
+@media (width > 700px) {
+	.card {
+		flex-direction: row;
+		max-width: 700px;
+		.card__img > img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 15px 0 0 15px;
+		}
+	}
+}
