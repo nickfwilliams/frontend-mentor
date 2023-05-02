@@ -46,7 +46,7 @@ body {
 	}
 
 	.card__post-info--inactive {
-		display: none;
+		display: flex;
 		align-items: center;
 		margin-top: 2em;
 		padding: 1.5em;
@@ -81,7 +81,7 @@ body {
 	}
 
 	.card__post-info--active {
-		display: flex;
+		display: none;
 		background-color: var(--dark-grey);
 		align-items: center;
 		margin-top: 2em;
