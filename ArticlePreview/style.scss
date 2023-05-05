@@ -45,6 +45,13 @@ body {
 		}
 	}
 
+	.share-text a {
+		text-transform: uppercase;
+		letter-spacing: 0.4em;
+		color: #9fa0b9;
+		text-decoration: none;
+	}
+
 	.card__post-info--inactive {
 		display: flex;
 		align-items: center;
@@ -88,12 +95,6 @@ body {
 		padding: 1.5em;
 		border-radius: 0 0 15px 15px;
 
-		.share-text p {
-			text-transform: uppercase;
-			letter-spacing: 0.4em;
-			color: #9fa0b9;
-		}
-
 		.social-links {
 			display: flex;
 			outline: 2px;
@@ -130,5 +131,39 @@ body {
 		.card__post-info--active {
 			border-radius: 0 0 15px 0;
 		}
+
+		.tooltip {
+			position: relative;
+			display: inline-block;
+			margin-left: auto;
+		}
+
+		/* Tooltip text */
+		.tooltip .tooltiptext {
+			visibility: hidden;
+			display: flex;
+			justify-content: space-around;
+			background-color: var(--dark-grey);
+			text-align: center;
+			padding: 20px;
+			border-radius: 10px;
+			width: 225px;
+			bottom: 110%;
+			right: -100px;
+			/* Position the tooltip text - see examples below! */
+			position: absolute;
+			z-index: 1;
+
+			.social-links {
+				display: flex;
+				column-gap: 1em;
+				align-self: center;
+			}
+		}
+
+		/* Show the tooltip text when you mouse over the tooltip container */
+		// .tooltip:hover .tooltiptext {
+		// 	visibility: visible;
+		// }
 	}
 }

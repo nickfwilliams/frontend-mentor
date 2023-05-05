@@ -53,10 +53,21 @@
 						<span class="name">Michelle Appleton</span
 						><span class="date">28 Jun 2020</span>
 					</div>
-
-					<button class="card__share-btn">
-						<img src="/images/icon-share.svg" />
-					</button>
+					<div class="tooltip">
+						<button class="card__share-btn" id="inactive-share">
+							<img src="/images/icon-share.svg" />
+						</button>
+						<span class="tooltiptext">
+								<div class="share-text"><a href="#">Share</a></div>
+								<div class="social-links">
+									<a href="#"><img src="/images/icon-facebook.svg" alt="Facebook" /></a>
+									<a href="#"><img src="/images/icon-twitter.svg" alt="Twitter" /></a>
+									<a href="#"><img src="/images/icon-pinterest.svg" alt="Pintrest" /></a>
+								</div>
+				
+							</span>
+						</span>
+					</div>
 				</div>
 
 				<div class="card__post-info--active">
@@ -68,11 +79,12 @@
 						<img src="/images/icon-pinterest.svg" alt="Pintrest" />
 					</div>
 
-					<button class="card__share-btn">
+					<button class="card__share-btn" id="active-share">
 						<img class="share-icon" src="/images/icon-share.svg" />
 					</button>
 				</div>
 			</div>
 		</div>
+		<script src="index.js"></script>
 	</body>
 </html>
