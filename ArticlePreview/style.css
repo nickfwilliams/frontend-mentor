@@ -69,14 +69,21 @@ body {
 .card .card__post-info--inactive .author-text .date {
   color: var(--light-greyish-blue);
 }
-.card .card__post-info--inactive .card__share-btn {
-  margin-right: 1em;
+.card .card__post-info--inactive .tooltip {
   margin-left: auto;
+}
+.card .card__post-info--inactive .tooltip .card__share-btn {
+  margin-right: 1em;
   background-color: #ecf2f7;
   padding: 1em;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
+  background-image: url("/images/icon-share.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .card .card__post-info--active {
   display: none;
@@ -98,12 +105,13 @@ body {
   padding: 1em;
   border-radius: 50%;
   border: none;
-  cursor: pointer;
-}
-.card .card__post-info--active .card__share-btn .share-icon {
-  filter: brightness(0) saturate(100%) invert(97%) sepia(87%) saturate(0%) hue-rotate(356deg) brightness(111%) contrast(102%);
 }
 
+@media (width < 700px) {
+  .tooltiptext {
+    display: none;
+  }
+}
 @media (width > 700px) {
   .card {
     flex-direction: row;
@@ -129,22 +137,40 @@ body {
   .card .tooltip .tooltiptext {
     visibility: hidden;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    -moz-column-gap: 2em;
+         column-gap: 2em;
     background-color: var(--dark-grey);
     text-align: center;
-    padding: 20px;
     border-radius: 10px;
-    width: 225px;
-    bottom: 110%;
-    right: -100px;
+    width: 270px;
+    min-height: 60px;
     /* Position the tooltip text - see examples below! */
     position: absolute;
+    top: -90px;
+    left: -115px;
     z-index: 1;
+  }
+  .card .tooltip .tooltiptext .share-text {
+    display: flex;
+    align-self: center;
+  }
+  .card .tooltip .tooltiptext .share-text a {
+    display: inline-block;
   }
   .card .tooltip .tooltiptext .social-links {
     display: flex;
     -moz-column-gap: 1em;
          column-gap: 1em;
     align-self: center;
+  }
+  .card .tooltip .tooltiptext .triangle {
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom: 0;
+    border-top: 10px solid var(--dark-grey);
+    position: absolute;
+    bottom: -8px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -9,7 +9,7 @@ const toolTipText = document.querySelector(".tooltiptext");
 
 // Mobile solution - //! Needs fixing
 
-// Hide author info panel and display share panel
+//Hide author info panel and display share panel
 if (window.innerWidth < 700) {
 	shareBtnInactive.onclick = function () {
 		if ((inactive.style.display = "flex")) {
@@ -27,7 +27,7 @@ if (window.innerWidth < 700) {
 	};
 }
 
-// Desktop solution - //* Needs implementing
+// Desktop solution
 
 shareBtnInactive.onclick = function () {
 	toolTipText.style.visibility = "visible";
