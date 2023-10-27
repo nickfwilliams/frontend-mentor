@@ -1,0 +1,87 @@
+/* See reset.css for page resets */
+
+:root {
+	/* Colors */
+
+	/* Primary */
+	--light-red: hsl(0, 100%, 67%);
+	--orangey-yellow: hsl(39, 100%, 56%);
+	--green-teal: hsl(166, 100%, 37%);
+	--cobalt-blue: hsl(234, 85%, 45%);
+
+	/* Gradients */
+
+	/* Background */
+	--light-slate-blue: hsl(252, 100%, 67%);
+	--light-royal-blue: hsl(241, 81%, 54%);
+
+	/* Circle */
+	--violet-blue: hsla(256, 72%, 46%, 1);
+	--persian-blue: hsla(241, 72%, 46%, 0);
+
+	/* Neutral */
+	--white: hsl(0, 0%, 100%);
+	--pale-blue: hsl(221, 100%, 96%);
+	--light-lavender: hsl(241, 100%, 89%);
+	--dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+body {
+	font-family: "Hanken Grotesk", sans-serif;
+	font-weight: 400;
+	background-color: #f5f3f0;
+	padding-block-start: 2rem;
+}
+
+.main-container {
+	max-width: 375px;
+	margin-inline: auto;
+	background-color: #fff;
+}
+
+.score-window {
+	background-image: linear-gradient(
+		var(--light-slate-blue),
+		var(--light-royal-blue)
+	);
+	text-align: center;
+	padding: 1rem 2rem 2rem 2rem;
+	color: var(--white);
+	border-radius: 0 0 2rem 2rem;
+}
+
+.score-window__result {
+	font-size: 1.2rem;
+	color: var(--light-lavender);
+}
+
+.score-window__circle {
+	background-image: linear-gradient(var(--violet-blue), var(--persian-blue));
+	margin-inline: auto;
+	padding: 1rem;
+	margin-block: 2rem;
+
+	border-radius: 50%;
+	max-width: 135px;
+	aspect-ratio: 1/1;
+}
+
+.score-window__user-score {
+	font-size: 3rem;
+	font-weight: 700;
+	margin: 0;
+}
+
+.score-window__maximum-score {
+	font-size: 1rem;
+	color: var(--light-lavender);
+	margin: 0;
+}
+
+.score-window__result-text h3 {
+	font-size: 1.75rem;
+}
+
+.score-window__result-text p {
+	color: var(--light-lavender);
+}
