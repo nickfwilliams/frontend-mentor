@@ -207,6 +207,7 @@ body {
 		font-size: 5rem;
 		font-weight: 700;
 		margin: 0;
+		transform: translateY(1rem);
 	}
 
 	.score-window__result-text p {
