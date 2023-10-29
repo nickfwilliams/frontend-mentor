@@ -103,10 +103,10 @@ body {
 }
 
 .score__out-of p {
-	display: inline-block;
+	display: inline;
 }
 
-.score__out-of p:first-of-type {
+.score-data p:first-of-type {
 	font-weight: 700;
 }
 
