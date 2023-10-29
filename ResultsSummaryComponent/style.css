@@ -60,7 +60,6 @@ body {
 	margin-inline: auto;
 	padding: 1rem;
 	margin-block: 2rem;
-
 	border-radius: 50%;
 	max-width: 135px;
 	aspect-ratio: 1/1;
@@ -174,4 +173,42 @@ body {
 		var(--light-slate-blue),
 		var(--light-royal-blue)
 	);
+}
+
+/* Desktop Media Queries */
+
+@media screen and (width > 700px) {
+	.main-container {
+		display: flex;
+		max-width: 700px;
+	}
+
+	.main-container > * {
+		flex: 1;
+	}
+
+	.score-window {
+		border-radius: 2rem;
+	}
+
+	.score-window__circle {
+		background-image: linear-gradient(var(--violet-blue), var(--persian-blue));
+		margin-inline: auto;
+		padding: 1rem;
+		margin-block: 2rem;
+		border-radius: 50%;
+		max-width: 200px;
+		aspect-ratio: 1/1;
+	}
+
+	.score-window__user-score {
+		font-size: 5rem;
+		font-weight: 700;
+		margin: 0;
+	}
+
+	.score-window__result-text p {
+		max-width: 25ch;
+		margin-inline: auto;
+	}
 }
