@@ -60,7 +60,6 @@ body {
 	margin-inline: auto;
 	padding: 1rem;
 	margin-block: 2rem;
-
 	border-radius: 50%;
 	max-width: 135px;
 	aspect-ratio: 1/1;
@@ -104,10 +103,10 @@ body {
 }
 
 .score__out-of p {
-	display: inline-block;
+	display: inline;
 }
 
-.score__out-of p:first-of-type {
+.score-data p:first-of-type {
 	font-weight: 700;
 }
 
@@ -174,4 +173,45 @@ body {
 		var(--light-slate-blue),
 		var(--light-royal-blue)
 	);
+}
+
+/* Desktop Media Queries */
+
+@media screen and (width > 700px) {
+	.main-container {
+		display: flex;
+		max-width: 700px;
+		border-radius: 2rem;
+		box-shadow: 10px 10px 70px 4px rgba(0, 0, 0, 0.1);
+	}
+
+	.main-container > * {
+		flex: 1;
+	}
+
+	.score-window {
+		border-radius: 2rem;
+	}
+
+	.score-window__circle {
+		background-image: linear-gradient(var(--violet-blue), var(--persian-blue));
+		margin-inline: auto;
+		padding: 1rem;
+		margin-block: 2rem;
+		border-radius: 50%;
+		max-width: 200px;
+		aspect-ratio: 1/1;
+	}
+
+	.score-window__user-score {
+		font-size: 5rem;
+		font-weight: 700;
+		margin: 0;
+		transform: translateY(1rem);
+	}
+
+	.score-window__result-text p {
+		max-width: 25ch;
+		margin-inline: auto;
+	}
 }
