@@ -3,9 +3,13 @@ module.exports = {
 	content: ["*.{html,js}"],
 	theme: {
 		extend: {
+			boxShadow: {
+				md: "0px 10px 0px 0px rgba(0,0,0,0.3)",
+			},
 			fontFamily: {
 				body: ["Poppins", "sans-serif"],
 			},
+
 			colors: {
 				femRed: "hsl(0, 100%, 74%)",
 				femGreen: "hsl(154, 59%, 51%)",
