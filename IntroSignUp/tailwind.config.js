@@ -4,7 +4,8 @@ module.exports = {
 	theme: {
 		extend: {
 			boxShadow: {
-				md: "0px 10px 0px 0px rgba(0,0,0,0.3)",
+				md: "0px 10px 0px 0px rgba(0,0,0,0.2)",
+				green: "0px 5px 0px 0px rgb(42, 162, 110)",
 			},
 			fontFamily: {
 				body: ["Poppins", "sans-serif"],

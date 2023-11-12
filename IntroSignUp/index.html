@@ -37,7 +37,7 @@
 	</head>
 	<body class="grid min-h-screen place-content-center font-body">
 		<main
-			class="max-w-sm border-solid border-2 border-indigo-600 bg-femRed text-center py-24"
+			class="max-w-sm border-solid bg-femRed text-center py-24"
 			style="background-image: url('images/bg-intro-mobile.png')"
 		>
 			<h1 class="max-w-xs text-2xl text-white font-bold pb-6 m-auto">
@@ -50,33 +50,68 @@
 				invaluable.
 			</p>
 
-			<button class="text-white bg-femBlue rounded-xl mb-6 py-6 shadow-md">
-				<p class="max-w-xs">Try it free 7 days then $20/mo. thereafter</p>
+			<button class="text-white bg-femBlue rounded-lg mb-6 py-6 shadow-md">
+				<p class="max-w-xs test">Try it free 7 days then $20/mo. thereafter</p>
 			</button>
 
-			<form action="/form-results" method="post">
+			<form
+				action="/form-results"
+				method="post"
+				class="bg-white rounded-xl mx-8"
+			>
 				<label for="first-name"></label>
-				<input type="text" id="name" name="first_name" />
+				<input
+					class="w-5/6 border py-4 rounded-md border-gray-300 mt-6 px-3 font-bold placeholder-gray-500"
+					type="text"
+					id="name"
+					name="first_name"
+					placeholder="First Name"
+				/>
 				<label for="last-name"></label>
-				<input type="text" id="name" name="last_name" />
+				<input
+					class="w-5/6 border py-4 rounded-md border-gray-300 mt-4 px-3 font-bold placeholder-gray-500"
+					type="text"
+					id="name"
+					name="last_name"
+					placeholder="Last Name"
+				/>
 				<label for="mail"></label>
-				<input type="email" id="mail" name="user_email" />
+				<input
+					class="w-5/6 border py-4 rounded-md border-gray-300 mt-4 px-3 font-bold placeholder-gray-500"
+					type="email"
+					id="mail"
+					name="user_email"
+					placeholder="Email Address"
+				/>
 				<label for="mail"></label>
-				<input type="password" id="password" name="password" /> <br />
+				<input
+					class="w-5/6 border py-4 rounded-md border-gray-300 mt-4 px-3 font-bold placeholder-gray-500"
+					type="password"
+					id="password"
+					name="password"
+					placeholder="Password"
+				/>
+				<br />
 
-				<button type="submit">Claim your free trial</button>
+				<button
+					type="submit"
+					class="w-5/6 text-white bg-femGreen rounded-lg mb-6 py-4 shadow-green mt-4 border-emerald-600"
+				>
+					<p class="uppercase font-bold tracking-wide">Claim your free trial</p>
+				</button>
 
-				<p>
-					By clicking the button, you are agreeing to our Terms and Services
+				<p class="text-xs text-gray-500 px-6 pb-6">
+					By clicking the button, you are agreeing to our
+					<a href="#" class="text-red-400 font-bold">Terms and Services</a>
 				</p>
 			</form>
 
 			<footer>
-				<p class="attribution">
+				<p class="attribution pt-6">
 					Challenge by
 					<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
 						>Frontend Mentor</a
-					>. Coded by <a href="#">Your Name Here</a>.
+					>. Coded by <a href="#">Nick Williams</a>.
 				</p>
 			</footer>
 		</main>
