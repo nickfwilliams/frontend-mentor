@@ -609,11 +609,6 @@ video {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
-.border-red-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(252 165 165 / var(--tw-border-opacity));
-}
-
 .bg-femBlue {
   --tw-bg-opacity: 1;
   background-color: hsl(248 32% 49% / var(--tw-bg-opacity));
@@ -711,44 +706,9 @@ video {
   color: rgb(248 113 113 / var(--tw-text-opacity));
 }
 
-.text-red-900 {
-  --tw-text-opacity: 1;
-  color: rgb(127 29 29 / var(--tw-text-opacity));
-}
-
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.placeholder-red-900::-moz-placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(127 29 29 / var(--tw-placeholder-opacity));
-}
-
-.placeholder-red-900::placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(127 29 29 / var(--tw-placeholder-opacity));
-}
-
-.placeholder-gray-900::-moz-placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-placeholder-opacity));
-}
-
-.placeholder-gray-900::placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-placeholder-opacity));
-}
-
-.placeholder-gray-700::-moz-placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-placeholder-opacity));
-}
-
-.placeholder-gray-700::placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-placeholder-opacity));
 }
 
 .placeholder-gray-500::-moz-placeholder {
@@ -771,4 +731,39 @@ video {
   --tw-shadow: 0px 10px 0px 0px rgba(0,0,0,0.2);
   --tw-shadow-colored: 0px 10px 0px 0px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+*:focus {
+  outline: none;
+}
+
+.focus\:border-8:focus {
+  border-width: 8px;
+}
+
+.focus\:border-4:focus {
+  border-width: 4px;
+}
+
+.focus\:border-2:focus {
+  border-width: 2px;
+}
+
+.focus\:border-t-4:focus {
+  border-top-width: 4px;
+}
+
+.focus\:border-red-700:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(185 28 28 / var(--tw-border-opacity));
+}
+
+.focus\:border-blue-400:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(96 165 250 / var(--tw-border-opacity));
+}
+
+.focus\:border-violet-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(139 92 246 / var(--tw-border-opacity));
 }

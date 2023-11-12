@@ -1,7 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ["*.{html,js}"],
+
 	theme: {
+		// variant: {
+		// 	extend: {
+		// 		border: ["responsive", "hover", "focus"],
+		// 	},
+		// },
+
 		extend: {
 			boxShadow: {
 				md: "0px 10px 0px 0px rgba(0,0,0,0.2)",
@@ -10,7 +17,6 @@ module.exports = {
 			fontFamily: {
 				body: ["Poppins", "sans-serif"],
 			},
-
 			colors: {
 				femRed: "hsl(0, 100%, 74%)",
 				femGreen: "hsl(154, 59%, 51%)",
