@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+form * {
+	/* outline: 1px solid red; */
+}
