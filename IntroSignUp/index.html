@@ -37,91 +37,103 @@
 	</head>
 	<body class="grid min-h-screen place-content-center font-body py-12">
 		<main
-			class="max-w-sm border-solid border-2 bg-femRed text-center py-24 px-6"
+			class="border-solid border-2 bg-femRed text-center py-24 px-6 sm:flex sm:gap-8 sm:text-left"
 			style="background-image: url('images/bg-intro-mobile.png')"
 		>
-			<h1 class="max-w-xs text-2xl text-white font-bold pb-6 m-auto">
-				Learn to code by watching others
-			</h1>
-
-			<p class="text-white pb-12">
-				See how experienced developers solve problems in real-time. Watching
-				scripted tutorials is great, but understanding how developers think is
-				invaluable.
-			</p>
-
-			<button
-				class="text-white bg-femBlue hover:bg-indigo-600 active:bg-indigo-800 rounded-xl mb-6 py-4 shadow-md m-auto px-20"
+			<!-- Left container -->
+			<div
+				class="border-solid border-4 bg-green sm:flex sm:flex-col sm:justify-center sm:pl-32"
 			>
-				<p class="leading-7">
-					<span class="font-bold">Try it free 7 days </span> then<br />
-					$20/mo. thereafter
-				</p>
-			</button>
-
-			<form
-				action="/form-results"
-				method="post"
-				class="bg-white rounded-xl px-4 pb-4 shadow-md"
-			>
-				<label for="first-name"></label>
-				<input
-					class="w-full border py-4 rounded-md border-gray-300 mt-6 px-3 font-bold placeholder-gray-500 focus:border-violet-500 focus:border-2"
-					type="text"
-					id="name"
-					name="first_name"
-					placeholder="First Name"
-				/>
-				<label for="last-name"></label>
-				<input
-					class="w-full border py-4 rounded-md border-gray-300 mt-4 px-3 font-bold placeholder-gray-500 focus:border-violet-500 focus:border-2"
-					type="text"
-					id="name"
-					name="last_name"
-					placeholder="Last Name"
-				/>
-				<label for="mail"></label>
-				<input
-					class="w-full border py-4 rounded-md border-gray-300 mt-4 px-3 font-bold placeholder-gray-500 focus:border-violet-500 focus:border-2"
-					type="email"
-					id="mail"
-					name="user_email"
-					placeholder="Email Address"
-				/>
-				<label for="mail"></label>
-				<input
-					class="w-full border py-4 rounded-md border-gray-300 mt-4 px-3 font-bold placeholder-gray-500 focus:border-violet-500 focus:border-2"
-					type="password"
-					id="password"
-					name="password"
-					placeholder="Password"
-					class="border py-4 rounded-md border-gray-300 mt-4 px-3 font-bold placeholder-gray-500 focus:border-violet-500 focus:border-2"
-				/>
-				<br />
-
-				<button
-					type="submit"
-					class="bg-femGreen hover:bg-green-500 active:bg-green-600 rounded-md text-white uppercase py-4 w-full border-b-4 border-green-600 my-4"
+				<h1
+					class="text-2xl text-white font-bold pb-6 m-auto sm:m-0 sm:text-4xl sm:max-w-xs"
 				>
-					<p class="tracking-wider">Claim your free trial</p>
+					Learn to code by watching others
+				</h1>
+
+				<p class="text-white pb-12">
+					See how experienced developers solve problems in real-time. Watching
+					scripted tutorials is great, but understanding how developers think is
+					invaluable.
+				</p>
+			</div>
+
+			<!-- Right container -->
+			<div class="">
+				<button
+					class="w-full text-white bg-femBlue hover:bg-indigo-600 active:bg-indigo-800 rounded-xl mb-6 py-4 shadow-md m-auto px-20"
+				>
+					<p class="leading-7">
+						<span class="font-bold">Try it free 7 days </span> then $20/mo.
+						thereafter
+					</p>
 				</button>
 
-				<p class="text-xs text-gray-400 leading-6">
-					By clicking the button, you are agreeing to our
-					<a href="#" class="text-xs text-femRed font-bold"
-						>Terms and Services</a
-					>
-				</p>
-			</form>
+				<form
+					action="/form-results"
+					method="post"
+					class="bg-white rounded-xl px-4 pb-4 shadow-md"
+				>
+					<label for="first-name"></label>
+					<input
+						class="w-full border py-4 rounded-md border-gray-300 mt-6 px-3 font-bold placeholder-gray-500 focus:border-violet-500 focus:border-2"
+						type="text"
+						id="name"
+						name="first_name"
+						placeholder="First Name"
+					/>
+					<label for="last-name"></label>
+					<input
+						class="w-full border py-4 rounded-md border-gray-300 mt-4 px-3 font-bold placeholder-gray-500 focus:border-violet-500 focus:border-2"
+						type="text"
+						id="name"
+						name="last_name"
+						placeholder="Last Name"
+					/>
+					<label for="mail"></label>
+					<input
+						class="w-full border py-4 rounded-md border-gray-300 mt-4 px-3 font-bold placeholder-gray-500 focus:border-violet-500 focus:border-2"
+						type="email"
+						id="mail"
+						name="user_email"
+						placeholder="Email Address"
+					/>
+					<label for="mail"></label>
+					<input
+						class="w-full border py-4 rounded-md border-gray-300 mt-4 px-3 font-bold placeholder-gray-500 focus:border-violet-500 focus:border-2"
+						type="password"
+						id="password"
+						name="password"
+						placeholder="Password"
+						class="border py-4 rounded-md border-gray-300 mt-4 px-3 font-bold placeholder-gray-500 focus:border-violet-500 focus:border-2"
+					/>
+					<br />
 
-			<footer>
-				<p class="attribution pt-6">
-					Challenge by
-					<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-						>Frontend Mentor</a
-					>. Coded by <a href="#">Nick Williams</a>.
-				</p>
-			</footer>
+					<button
+						type="submit"
+						class="bg-femGreen hover:bg-green-500 active:bg-green-600 rounded-md text-white uppercase py-4 w-full border-b-4 border-green-600 my-4"
+					>
+						<p class="tracking-wider">Claim your free trial</p>
+					</button>
+
+					<p class="text-xs text-gray-400 leading-6">
+						By clicking the button, you are agreeing to our
+						<a href="#" class="text-xs text-femRed font-bold"
+							>Terms and Services</a
+						>
+					</p>
+				</form>
+
+				<footer>
+					<p class="attribution pt-6">
+						Challenge by
+						<a
+							href="https://www.frontendmentor.io?ref=challenge"
+							target="_blank"
+							>Frontend Mentor</a
+						>. Coded by <a href="#">Nick Williams</a>.
+					</p>
+				</footer>
+			</div>
 		</main>
 	</body>
 </html>
