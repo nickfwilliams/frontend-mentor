@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Advice generator app</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+		<title>Frontend Mentor | Advice generator app</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<p id="advice-number" class="advice-number">advice #</p>
 
-  Advice #<!-- Advice ID goes here -->
+			<p id="advice-text" class="advice-text">
+				Click on the dice to receive a helpful tip!
+			</p>
+			<button id="diceBtn" class="dice">
+				<img src="images/icon-dice.svg" />
+			</button>
+		</div>
 
-  "<!-- Advice text goes here -->"
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+		<script>
+			const apiUrl = "https://api.adviceslip.com/advice";
+			const adviceNumber = document.getElementById("advice-number");
+			const adviceText = document.getElementById("advice-text");
+			const diceBtn = document.getElementById("diceBtn");
+
+			diceBtn.addEventListener("click", () => {
+				fetch(apiUrl)
+					.then((response) => {
+						if (!response.ok) {
+							throw new Error(`HTTP error! status: ${response.status}`);
+						}
+						return response.json();
+					})
+					.then((data) => {
+						console.log(data);
+						adviceNumber.textContent = `advice #${data.slip.id}`;
+						adviceText.textContent = `"${data.slip.advice}"`;
+					})
+					.catch((error) => {
+						console.error("Error:", error);
+					});
+			});
+		</script>
+	</body>
 </html>
