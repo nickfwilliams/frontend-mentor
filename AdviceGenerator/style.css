@@ -7,13 +7,44 @@
 }
 
 body {
-  font-family: Manrope;
   min-height: 100vh;
+  font-family: Manrope;
+  font-weight: 800;
   background-color: var(--dark-blue);
   display: grid;
   place-content: center;
 }
 
 .wrapper {
-  background-color: var(--grayish-blue);
+  position: relative;
+  max-width: 50ch;
+  background-color: var(--dark-grayish-blue);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+}
+.wrapper .advice-number {
+  color: var(--neon-green);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.2rem;
+  margin-block-end: 1.5rem;
+}
+.wrapper .advice-text {
+  font-size: 28px;
+  color: white;
+  margin-block-end: 1.5rem;
+}
+.wrapper .divider {
+  width: 100%;
+}
+.wrapper .dice {
+  transform: translateY(50px);
+  background-color: var(--neon-green);
+  padding: 1rem;
+  border-radius: 50%;
+}
+.wrapper .dice:hover {
+  cursor: pointer;
+  box-shadow: 0 0 100px var(--neon-green);
 }/*# sourceMappingURL=style.css.map */
