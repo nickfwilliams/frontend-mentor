@@ -22,6 +22,7 @@ body {
 }
 
 .wrapper {
+	margin: 1rem;
 	position: relative;
 	max-width: 50ch;
 	background-color: var(--dark-grayish-blue);
@@ -43,9 +44,29 @@ body {
 		margin-block-end: 1.5rem;
 	}
 
-	.divider {
+	.divider-desktop {
 		width: 100%;
-		;
+		display: block;
+	}
+
+	.divider-mobile {
+		width: 100%;
+		display: none;
+	}
+
+	.divider-desktop {
+		width: 100%;
+		display: block;
+	}
+
+	@media screen and (width < 500px) {
+		.divider-desktop {
+			display: none;
+		}
+
+		.divider-mobile {
+			display: block;
+		}
 	}
 
 	.dice {

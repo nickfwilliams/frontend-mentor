@@ -16,6 +16,7 @@ body {
 }
 
 .wrapper {
+  margin: 1rem;
   position: relative;
   max-width: 50ch;
   background-color: var(--dark-grayish-blue);
@@ -35,8 +36,25 @@ body {
   color: white;
   margin-block-end: 1.5rem;
 }
-.wrapper .divider {
+.wrapper .divider-desktop {
   width: 100%;
+  display: block;
+}
+.wrapper .divider-mobile {
+  width: 100%;
+  display: none;
+}
+.wrapper .divider-desktop {
+  width: 100%;
+  display: block;
+}
+@media screen and (width < 500px) {
+  .wrapper .divider-desktop {
+    display: none;
+  }
+  .wrapper .divider-mobile {
+    display: block;
+  }
 }
 .wrapper .dice {
   transform: translateY(50px);
