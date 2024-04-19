@@ -1,0 +1,25 @@
+:root {
+	// ## Colors 
+
+	// ### Primary
+	--light-cyan: hsl(193, 38%, 86%);
+	--neon-green: hsl(150, 100%, 66%);
+
+	//### Neutral 
+	--grayish-blue: hsl(217, 19%, 38%);
+	--dark-grayish-blue: hsl(217, 19%, 24%);
+	--dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+	font-family: Manrope;
+	min-height: 100vh;
+	background-color: var(--dark-blue);
+	display: grid;
+	place-content: center;
+
+}
+
+.wrapper {
+	background-color: var(--grayish-blue);
+}
