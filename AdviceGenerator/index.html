@@ -25,7 +25,8 @@
 		<title>Frontend Mentor | Advice generator app</title>
 	</head>
 	<body>
-		<div class="wrapper">
+		<h1 class="visually-hidden">Random Advice Generator</h1>
+		<main class="wrapper">
 			<p id="advice-number" class="advice-number">advice #</p>
 
 			<p id="advice-text" class="advice-text">
@@ -43,10 +44,13 @@
 				class="divider-mobile"
 			/>
 
-			<button id="diceBtn" class="dice">
-				<img src="images/icon-dice.svg" />
+			<button id="diceBtn" class="dice" title="dice">
+				<img
+					src="images/icon-dice.svg"
+					alt="A six-sided dice inside a round button"
+				/>
 			</button>
-		</div>
+		</main>
 
 		<script>
 			const apiUrl = "https://api.adviceslip.com/advice";
