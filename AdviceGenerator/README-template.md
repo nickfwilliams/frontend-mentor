@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/advice-generator-using-scss-and-css-variables--J4He9inmd)
 - Live Site URL: [Add live site URL here](https://nickfwilliams.github.io/frontend-mentor/AdviceGenerator/index.html)
 
 ## My process
@@ -40,6 +40,7 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
+- SCSS
 - Flexbox
 
 ### What I learned
