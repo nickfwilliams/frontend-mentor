@@ -134,9 +134,13 @@ tr:last-child td {
 /* MEDIA QUERIES */
 
 @media (width <= 768px) {
+	body {
+		background-color: var(--white);
+	}
+
 	.wrapper {
-		margin: 0;
-		padding: 0;
+		margin-block: 0;
+		padding: 0 0 2rem 0;
 		border-radius: 0;
 	}
 
