@@ -36,6 +36,7 @@ td {
 
 img {
 	border-radius: 15px;
+	margin: 2.5rem;
 }
 
 hr {
@@ -66,6 +67,12 @@ ol {
 	margin-inline-start: -10px;
 }
 
+ol li::marker,
+ul li::marker {
+	color: var(--dark-raspberry);
+	font-weight: 600;
+}
+
 /* Bold out the first part of the list copy*/
 span {
 	font-weight: 800;
@@ -80,6 +87,10 @@ span {
 	max-width: 70ch;
 	margin-inline: auto;
 	margin-block: 5rem;
+	background-color: var(--white);
+	border-radius: 15px;
+	/* Important - needed to resolve collapsing top margin on image */
+	padding-block: 2.5rem;
 }
 
 .wrapper > * {
@@ -99,16 +110,15 @@ span {
 
 /* BLOCKS */
 
-.wrapper {
-	background-color: var(--white);
-	padding: 2.5rem;
-	border-radius: 15px;
-}
-
 .preparation {
 	padding: 2rem;
 	background-color: var(--rose-white);
 	border-radius: 15px;
+}
+
+section,
+hr {
+	margin-inline: 2.5rem;
 }
 
 /* EXCEPTIONS */
@@ -119,4 +129,19 @@ td:first-child {
 
 tr:last-child td {
 	border-bottom: none;
+}
+
+/* MEDIA QUERIES */
+
+@media (width <= 768px) {
+	.wrapper {
+		margin: 0;
+		padding: 0;
+		border-radius: 0;
+	}
+
+	img {
+		margin: 0;
+		border-radius: 0;
+	}
 }
