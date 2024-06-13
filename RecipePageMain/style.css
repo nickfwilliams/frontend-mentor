@@ -73,6 +73,11 @@ ul li::marker {
 	font-weight: 600;
 }
 
+section,
+hr {
+	margin-inline: 2.5rem;
+}
+
 /* Bold out the first part of the list copy*/
 span {
 	font-weight: 800;
@@ -93,6 +98,7 @@ span {
 	padding-block: 2.5rem;
 }
 
+/* Every Layout - The Stack */
 .wrapper > * {
 	margin-block: 0;
 }
@@ -114,11 +120,6 @@ span {
 	padding: 2rem;
 	background-color: var(--rose-white);
 	border-radius: 15px;
-}
-
-section,
-hr {
-	margin-inline: 2.5rem;
 }
 
 /* EXCEPTIONS */
