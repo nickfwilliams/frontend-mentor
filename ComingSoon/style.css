@@ -1,0 +1,88 @@
+:root {
+	--soft-red: hsl(0, 36%, 70%);
+	--rose-red: hsl(0, 93%, 68%);
+	--bg-pink: #fdf5f5;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	font-family: "Josefin Sans", sans-serif;
+	color: var(--soft-red);
+	text-align: center;
+	min-height: 100dvh;
+}
+
+.main-wrapper {
+	background-image: linear-gradient(#fffdfe, var(--bg-pink));
+	max-width: 375px;
+	padding-block-end: 5rem;
+
+	.logo {
+		padding: 2rem;
+		height: auto;
+		width: 175px;
+	}
+
+	.text-area {
+		padding: 3.5rem 2rem 0 2rem;
+		h1 {
+			text-transform: uppercase;
+			letter-spacing: 0.3rem;
+			font-size: 2.75rem;
+			font-weight: 300;
+			line-height: 1.2;
+			padding-block-end: 1rem;
+		}
+
+		h1 span {
+			color: black;
+			font-weight: 600;
+		}
+		p {
+			font-weight: 600;
+		}
+	}
+
+	form input,
+	form button {
+		vertical-align: middle;
+	}
+
+	form {
+		margin-block-start: 2rem;
+		position: relative;
+
+		input {
+			border: 1px solid var(--soft-red);
+			background-color: var(--bg-pink);
+			outline: none;
+			padding: 0.75rem 6rem 0.75rem 1rem;
+			border-radius: 25px;
+		}
+
+		::placeholder {
+			color: var(--soft-red) !important;
+			opacity: 0.5;
+		}
+
+		button {
+			cursor: pointer;
+			position: absolute;
+			min-height: 100%;
+			right: 20px;
+			border-radius: 25px;
+			border: none;
+			background-image: linear-gradient(
+				to left,
+				var(--rose-red),
+				var(--soft-red)
+			);
+			box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+
+			img {
+				padding-inline: 1.4rem;
+			}
+		}
+	}
+}
