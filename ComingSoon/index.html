@@ -12,8 +12,8 @@
 			rel="stylesheet"
 		/>
 
-		<link rel="stylesheet" href="style.css" />
-		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="./style.css" />
+		<link rel="stylesheet" href="./reset.css" />
 
 		<title>Frontend Mentor | Base Apparel coming soon page</title>
 	</head>
@@ -37,11 +37,24 @@
 					launch deals.
 				</p>
 
-				<form action="push">
-					<input type="email" placeholder="Email Address" />
+				<form id="emailForm" action="push" novalidate>
+					<div class="input-container">
+						<input id="email" type="email" placeholder="Email Address" />
+						<img
+							class="error-icon"
+							id="error-icon"
+							src="./images/icon-error.svg"
+						/>
+					</div>
 					<button type="submit"><img src="./images/icon-arrow.svg " /></button>
 				</form>
+
+				<p class="error-message" id="error-message">
+					Please provide a valid email address
+				</p>
 			</div>
 		</main>
+
+		<script type="text/javascript" src="./index.js"></script>
 	</body>
 </html>

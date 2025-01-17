@@ -13,6 +13,10 @@ body {
 	min-height: 100dvh;
 }
 
+.hidden {
+	display: none;
+}
+
 .main-wrapper {
 	background-image: linear-gradient(#fffdfe, var(--bg-pink));
 	max-width: 375px;
@@ -53,12 +57,29 @@ body {
 		margin-block-start: 2rem;
 		position: relative;
 
-		input {
-			border: 1px solid var(--soft-red);
-			background-color: var(--bg-pink);
-			outline: none;
-			padding: 0.75rem 6rem 0.75rem 1rem;
-			border-radius: 25px;
+		.input-container {
+			position: relative;
+			display: inline-block;
+			width: 100%;
+
+			input {
+				border: 1px solid var(--soft-red);
+				background-color: var(--bg-pink);
+				outline: none;
+				padding: 0.75rem 6rem 0.75rem 1rem;
+				border-radius: 25px;
+				width: 100%;
+			}
+
+			.error-icon {
+				position: absolute;
+				right: 80px; /* Adjust to match your input's padding */
+				top: 50%;
+				transform: translateY(-50%);
+				width: 20px; /* Adjust size as needed */
+				height: 20px; /* Adjust size as needed */
+				display: none;
+			}
 		}
 
 		::placeholder {
@@ -70,7 +91,7 @@ body {
 			cursor: pointer;
 			position: absolute;
 			min-height: 100%;
-			right: 20px;
+			right: 0px;
 			border-radius: 25px;
 			border: none;
 			background-image: linear-gradient(
@@ -90,5 +111,14 @@ body {
 				background-color: #f0cccb;
 			}
 		}
+	}
+
+	.error-message {
+		font-size: 0.8rem;
+		color: var(--rose-red);
+		margin-block-start: 0.5rem;
+		text-align: start;
+		padding-inline-start: 1rem;
+		visibility: hidden;
 	}
 }
