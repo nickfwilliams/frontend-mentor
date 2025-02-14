@@ -5,8 +5,6 @@
 }
 
 body {
-	display: grid;
-	place-items: top;
 	font-family: "Josefin Sans", sans-serif;
 	color: var(--soft-red);
 	text-align: center;
@@ -20,7 +18,6 @@ body {
 
 .main-wrapper {
 	background-image: linear-gradient(#fffdfe, var(--bg-pink));
-	/* max-width: 375px; */
 	padding-block-end: 5rem;
 
 	.logo-mobile {
