@@ -6,11 +6,12 @@
 
 body {
 	display: grid;
-	place-items: center;
+	place-items: top;
 	font-family: "Josefin Sans", sans-serif;
 	color: var(--soft-red);
 	text-align: center;
 	min-height: 100dvh;
+	background-image: linear-gradient(#fffdfe, var(--bg-pink));
 }
 
 .hidden {
@@ -19,13 +20,21 @@ body {
 
 .main-wrapper {
 	background-image: linear-gradient(#fffdfe, var(--bg-pink));
-	max-width: 375px;
+	/* max-width: 375px; */
 	padding-block-end: 5rem;
 
-	.logo {
+	.logo-mobile {
 		padding: 2rem;
 		height: auto;
 		width: 175px;
+	}
+
+	.logo-desktop {
+		display: none;
+	}
+
+	.hero-mobile {
+		width: 100%;
 	}
 
 	.text-area {
@@ -120,5 +129,49 @@ body {
 		text-align: start;
 		padding-inline-start: 1rem;
 		visibility: hidden;
+	}
+}
+
+@media screen and (width > 768px) {
+	.main-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+
+		.header-images {
+			order: 2;
+
+			.logo-mobile {
+				display: none;
+			}
+		}
+
+		.text-wrapper {
+			min-height: 100dvh;
+			display: flex;
+			align-items: center;
+			background-image: url("./images/bg-pattern-desktop.svg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: bottom left;
+
+			.text-area {
+				max-width: 60ch;
+				text-align: start;
+				padding: 0;
+				margin-inline: 10rem;
+
+				.logo-desktop {
+					display: block;
+					padding-block-end: 7rem;
+				}
+
+				h1 {
+					font-size: 5rem;
+					letter-spacing: 1.4rem;
+				}
+			}
+		}
 	}
 }
