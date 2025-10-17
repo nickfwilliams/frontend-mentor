@@ -1,195 +1,184 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
 :root {
-	--dark-grey: hsl(217, 19%, 35%);
-	--dark-blue: hsl(214, 17%, 51%);
-	--greyish-blue: hsl(212, 23%, 69%);
-	--light-greyish-blue: hsl(212, 23%, 69%);
-}
-
-.visually-hidden {
-	clip: rect(0 0 0 0);
-	-webkit-clip-path: inset(50%);
-	clip-path: inset(50%);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
+  --dark-grey: hsl(217, 19%, 35%);
+  --dark-blue: hsl(214, 17%, 51%);
+  --greyish-blue: hsl(212, 23%, 69%);
+  --light-greyish-blue: hsl(212, 23%, 69%);
 }
 
 body {
-	font-family: "Manrope", sans-serif;
-	font-size: 13px;
-	background-color: #f3f3f3;
-	color: var(--dark-grey);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  background-color: #f3f3f3;
+  color: var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
-	display: flex;
-	flex-direction: column;
-	max-width: 375px;
-	background-color: white;
-	border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+  background-color: white;
+  border-radius: 15px;
 }
 .card .card__img > img {
-	width: 100%;
-	height: 230px;
-	-o-object-fit: cover;
-	object-fit: cover;
-	-o-object-position: 25% 25%;
-	object-position: 25% 25%;
-	border-radius: 15px 15px 0 0;
+  width: 100%;
+  height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 25% 25%;
+     object-position: 25% 25%;
+  border-radius: 15px 15px 0 0;
 }
 .card .card__text h2 {
-	margin: 1.5em 1.5em 0.8em 1.5em;
-	margin-inline: 1.5em;
+  margin: 1.5em 1.5em 0.8em 1.5em;
+  margin-inline: 1.5em;
 }
 .card .card__text p {
-	line-height: 1.7em;
-	margin-inline: 2.2em;
-	color: var(--dark-blue);
+  line-height: 1.7em;
+  margin-inline: 2.2em;
+  color: var(--dark-blue);
 }
 .card .share-text a {
-	text-transform: uppercase;
-	letter-spacing: 0.4em;
-	color: #9fa0b9;
-	text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: #9fa0b9;
+  text-decoration: none;
 }
 .card .card__post-info--inactive {
-	display: flex;
-	align-items: center;
-	margin-top: 2em;
-	padding: 1.5em 1.5em 1.5em 3em;
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+  padding: 1.5em 1.5em 1.5em 3em;
 }
 .card .card__post-info--inactive .author-photo img {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	margin-right: 1em;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1em;
 }
 .card .card__post-info--inactive .author-text span {
-	display: block;
+  display: block;
 }
 .card .card__post-info--inactive .author-text .name {
-	font-weight: 700;
+  font-weight: 700;
 }
 .card .card__post-info--inactive .author-text .date {
-	color: var(--light-greyish-blue);
+  color: var(--light-greyish-blue);
 }
 .card .card__post-info--inactive .tooltip {
-	margin-left: auto;
+  margin-left: auto;
 }
 .card .card__post-info--inactive .tooltip .card__share-btn {
-	margin-right: 1em;
-	background-color: #ecf2f7;
-	padding: 1em;
-	height: 40px;
-	width: 40px;
-	border-radius: 50%;
-	border: none;
-	cursor: pointer;
-	background-image: url("./images/icon-share.svg");
-	background-repeat: no-repeat;
-	background-position: center;
+  margin-right: 1em;
+  background-color: #ecf2f7;
+  padding: 1em;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-image: url("/images/icon-share.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .card .card__post-info--active {
-	display: none;
-	background-color: var(--dark-grey);
-	align-items: center;
-	-moz-column-gap: 2em;
-	column-gap: 2em;
-	margin-top: 2em;
-	padding: 1.9em 1.5em 1.9em 3em;
-	border-radius: 0 0 15px 15px;
+  display: none;
+  background-color: var(--dark-grey);
+  align-items: center;
+  -moz-column-gap: 2em;
+       column-gap: 2em;
+  margin-top: 2em;
+  padding: 1.9em 1.5em 1.9em 3em;
+  border-radius: 0 0 15px 15px;
 }
 .card .card__post-info--active .social-links {
-	display: flex;
-	outline: 2px;
-	gap: 1em;
+  display: flex;
+  outline: 2px;
+  gap: 1em;
 }
 .card .card__post-info--active .card__share-btn {
-	margin-right: 1em;
-	margin-left: auto;
-	background-color: var(--light-greyish-blue);
-	padding: 1em;
-	height: 40px;
-	width: 40px;
-	border-radius: 50%;
-	border: none;
-	cursor: pointer;
-	background-image: url("./images/icon-share.svg");
-	background-repeat: no-repeat;
-	background-position: center;
+  margin-right: 1em;
+  margin-left: auto;
+  background-color: var(--light-greyish-blue);
+  padding: 1em;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-image: url("/images/icon-share.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media (width < 700px) {
-	.tooltiptext {
-		display: none;
-	}
+  .tooltiptext {
+    display: none;
+  }
 }
 @media (width > 700px) {
-	.card {
-		flex-direction: row;
-		max-width: 700px;
-		/* Tooltip text */
-		/* Show the tooltip text when you mouse over the tooltip container */
-	}
-	.card .card__img > img {
-		width: 100%;
-		height: 100%;
-		-o-object-fit: cover;
-		object-fit: cover;
-		border-radius: 15px 0 0 15px;
-	}
-	.card .card__post-info--active {
-		border-radius: 0 0 15px 0;
-	}
-	.card .tooltip {
-		position: relative;
-		display: inline-block;
-		margin-left: auto;
-	}
-	.card .tooltip .tooltiptext {
-		visibility: hidden;
-		display: flex;
-		justify-content: center;
-		-moz-column-gap: 2em;
-		column-gap: 2em;
-		background-color: var(--dark-grey);
-		text-align: center;
-		border-radius: 10px;
-		width: 270px;
-		min-height: 60px;
-		/* Position the tooltip text - see examples below! */
-		position: absolute;
-		top: -90px;
-		left: -115px;
-		z-index: 1;
-	}
-	.card .tooltip .tooltiptext .share-text {
-		display: flex;
-		align-self: center;
-	}
-	.card .tooltip .tooltiptext .share-text a {
-		display: inline-block;
-	}
-	.card .tooltip .tooltiptext .social-links {
-		display: flex;
-		-moz-column-gap: 1em;
-		column-gap: 1em;
-		align-self: center;
-	}
-	.card .tooltip .tooltiptext .triangle {
-		width: 0;
-		height: 0;
-		border: 10px solid transparent;
-		border-bottom: 0;
-		border-top: 10px solid var(--dark-grey);
-		position: absolute;
-		bottom: -8px;
-	}
-} /*# sourceMappingURL=style.css.map */
+  .card {
+    flex-direction: row;
+    max-width: 700px;
+    /* Tooltip text */
+    /* Show the tooltip text when you mouse over the tooltip container */
+  }
+  .card .card__img > img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px 0 0 15px;
+  }
+  .card .card__post-info--active {
+    border-radius: 0 0 15px 0;
+  }
+  .card .tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+  }
+  .card .tooltip .tooltiptext {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    -moz-column-gap: 2em;
+         column-gap: 2em;
+    background-color: var(--dark-grey);
+    text-align: center;
+    border-radius: 10px;
+    width: 270px;
+    min-height: 60px;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    top: -90px;
+    left: -115px;
+    z-index: 1;
+  }
+  .card .tooltip .tooltiptext .share-text {
+    display: flex;
+    align-self: center;
+  }
+  .card .tooltip .tooltiptext .share-text a {
+    display: inline-block;
+  }
+  .card .tooltip .tooltiptext .social-links {
+    display: flex;
+    -moz-column-gap: 1em;
+         column-gap: 1em;
+    align-self: center;
+  }
+  .card .tooltip .tooltiptext .triangle {
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom: 0;
+    border-top: 10px solid var(--dark-grey);
+    position: absolute;
+    bottom: -8px;
+  }
+}/*# sourceMappingURL=style.css.map */

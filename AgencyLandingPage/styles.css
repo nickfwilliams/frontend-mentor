@@ -1,0 +1,89 @@
+/* Variables */
+:root {
+  /* Colurs */
+  --red-400: hsl(7, 99%, 70%);
+  --yellow-500: hsl(51, 100%, 49%);
+  --green-800: hsl(167, 40%, 24%);
+  --blue-800: hsl(198, 62%, 26%);
+  --green-500: hsl(167, 34%, 41%);
+  /* Typescale */
+  --step--2: clamp(0.7813rem, 0.615rem + 0.8313vw, 1.28rem);
+  --step--1: clamp(0.9375rem, 0.7167rem + 1.1042vw, 1.6rem);
+  --step-0: clamp(1.125rem, 0.8333rem + 1.4583vw, 2rem);
+  --step-1: clamp(1.35rem, 0.9667rem + 1.9167vw, 2.5rem);
+  --step-2: clamp(1.62rem, 1.1183rem + 2.5083vw, 3.125rem);
+  --step-3: clamp(1.944rem, 1.2899rem + 3.2704vw, 3.9063rem);
+  --step-4: clamp(2.3328rem, 1.4828rem + 4.25vw, 4.8828rem);
+  --step-5: clamp(2.7994rem, 1.698rem + 5.5069vw, 6.1035rem);
+  /* Spacing */
+  --space-3xs: clamp(0.3125rem, 0.25rem + 0.3125vw, 0.5rem);
+  --space-2xs: clamp(0.5625rem, 0.4167rem + 0.7292vw, 1rem);
+  --space-xs: clamp(0.875rem, 0.6667rem + 1.0417vw, 1.5rem);
+  --space-s: clamp(1.125rem, 0.8333rem + 1.4583vw, 2rem);
+  --space-m: clamp(1.6875rem, 1.25rem + 2.1875vw, 3rem);
+  --space-l: clamp(2.25rem, 1.6667rem + 2.9167vw, 4rem);
+  --space-xl: clamp(3.375rem, 2.5rem + 4.375vw, 6rem);
+  --space-2xl: clamp(4.5rem, 3.3333rem + 5.8333vw, 8rem);
+  --space-3xl: clamp(6.75rem, 5rem + 8.75vw, 12rem);
+}
+
+h1,
+h2,
+h3 {
+  font-family: Fraunces, serif;
+}
+
+p,
+a {
+  font-family: Barlow, sans-serif;
+}
+
+section.nav-cta-wrapper {
+  position: relative;
+}
+section.nav-cta-wrapper .header-content {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}
+section.nav-cta-wrapper .header-content h1 {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  margin-block: 4rem 3.5rem;
+}
+section.nav-cta-wrapper .header-content img {
+  margin-inline: auto;
+}
+section.nav-cta-wrapper .desktop-nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-s) var(--space-xs);
+}
+section.nav-cta-wrapper .desktop-nav .nav-list {
+  display: flex;
+  gap: 3rem;
+  padding: 0;
+  list-style: none;
+}
+section.nav-cta-wrapper .desktop-nav .nav-list .nav-list-item a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+section.nav-cta-wrapper .desktop-nav .nav-list .nav-list-item a span {
+  color: var(--blue-800);
+  background-color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+}
+
+.mobile-nav {
+  display: none;
+}/*# sourceMappingURL=styles.css.map */
