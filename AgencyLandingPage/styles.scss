@@ -6,7 +6,13 @@
   --yellow-500: hsl(51, 100%, 49%);
   --green-800: hsl(167, 40%, 24%);
   --blue-800: hsl(198, 62%, 26%);
-  --green-500: hsl(167, 34%, 41%);
+  --green-500: hsl(175, 41%, 71%);
+
+  --grey-950: hsl(212, 27%, 19%);
+  --grey-600: hsl(213, 9%, 39%);
+  --grey-550: hsl(232, 10%, 55%);
+  --grey-400: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 95%);
 
   /* Typescale */
   --step--2: clamp(0.7813rem, 0.615rem + 0.8313vw, 1.28rem);
@@ -34,11 +40,13 @@ h1,
 h2,
 h3 {
   font-family: Fraunces, serif;
+  color: var(--grey-950);
 }
 
 p,
 a {
   font-family: Barlow, sans-serif;
+  color: var(--grey-600);
 }
 
 section.nav-cta-wrapper {
@@ -95,6 +103,7 @@ section.nav-cta-wrapper {
   }
 }
 
+/* Set main grid */
 .main-grid {
   display: grid;
   text-align: center;
@@ -114,6 +123,7 @@ section.nav-cta-wrapper {
     margin-block-end: 1.5rem;
   }
 
+  /* Grid link styling */
   a {
     position: relative;
     font-family: 'fraunces', serif;
@@ -122,6 +132,7 @@ section.nav-cta-wrapper {
     text-decoration: none;
     font-weight: 700;
 
+    /* Controls the stylised link underline */
     &::after {
       content: "";
       position: absolute;
@@ -168,17 +179,26 @@ section.nav-cta-wrapper {
   .cherries-tile {
     order: 5;
     position: relative;
+
+    h3,
+    p {
+      color: var(--green-800)
+    }
   }
 
   .orange-tile {
     order: 6;
     position: relative;
+
+    h3,
+    p {
+      color: var(--blue-800)
+    }
   }
 
   .cherries-text,
   .orange-text {
     position: absolute;
-    opacity: 0.6;
     bottom: 0;
     left: 0;
     padding-inline: 1.5rem;
@@ -187,6 +207,63 @@ section.nav-cta-wrapper {
     h3 {
       font-size: var(--step-1);
     }
+  }
+}
+
+/* Testimonial section */
+.testimonials {
+  background-color: var(--white);
+  padding: var(--space-xl) var(--space-m);
+  text-align: center;
+
+  h3 {
+    text-transform: uppercase;
+    color: var(--grey-550);
+    letter-spacing: 0.2rem;
+  }
+
+  .testimonial-wrapper {
+    .testimonial-tile {
+      img {
+        display: block;
+        margin-inline: auto;
+        margin-block: var(--space-xl) var(--space-l);
+        width: 100px;
+        height: auto;
+        border-radius: 50%;
+      }
+
+      p {
+        margin-block-end: var(--space-s);
+        color: var(--grey-950);
+      }
+
+      .name {
+        font-family: Fraunces, serif;
+        font-weight: 900;
+        margin-block-end: 0.5rem;
+      }
+
+      .title {
+        color: var(--grey-600)
+      }
+    }
+  }
+}
+
+/* Gallery */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+footer {
+  background-color: var(--green-500);
+
+  .footer-logo path {
+    fill: #397566;
   }
 }
 

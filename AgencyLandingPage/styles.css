@@ -5,7 +5,12 @@
   --yellow-500: hsl(51, 100%, 49%);
   --green-800: hsl(167, 40%, 24%);
   --blue-800: hsl(198, 62%, 26%);
-  --green-500: hsl(167, 34%, 41%);
+  --green-500: hsl(175, 41%, 71%);
+  --grey-950: hsl(212, 27%, 19%);
+  --grey-600: hsl(213, 9%, 39%);
+  --grey-550: hsl(232, 10%, 55%);
+  --grey-400: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 95%);
   /* Typescale */
   --step--2: clamp(0.7813rem, 0.615rem + 0.8313vw, 1.28rem);
   --step--1: clamp(0.9375rem, 0.7167rem + 1.1042vw, 1.6rem);
@@ -31,11 +36,13 @@ h1,
 h2,
 h3 {
   font-family: Fraunces, serif;
+  color: var(--grey-950);
 }
 
 p,
 a {
   font-family: Barlow, sans-serif;
+  color: var(--grey-600);
 }
 
 section.nav-cta-wrapper {
@@ -85,9 +92,11 @@ section.nav-cta-wrapper .desktop-nav .nav-list .nav-list-item a span {
   border-radius: 50px;
 }
 
+/* Set main grid */
 .main-grid {
   display: grid;
   text-align: center;
+  /* Grid link styling */
   /* Grid mobile ordering */
 }
 .main-grid img {
@@ -109,6 +118,7 @@ section.nav-cta-wrapper .desktop-nav .nav-list .nav-list-item a span {
   color: black;
   text-decoration: none;
   font-weight: 700;
+  /* Controls the stylised link underline */
 }
 .main-grid a::after {
   content: "";
@@ -148,14 +158,21 @@ section.nav-cta-wrapper .desktop-nav .nav-list .nav-list-item a span {
   order: 5;
   position: relative;
 }
+.main-grid .cherries-tile h3,
+.main-grid .cherries-tile p {
+  color: var(--green-800);
+}
 .main-grid .orange-tile {
   order: 6;
   position: relative;
 }
+.main-grid .orange-tile h3,
+.main-grid .orange-tile p {
+  color: var(--blue-800);
+}
 .main-grid .cherries-text,
 .main-grid .orange-text {
   position: absolute;
-  opacity: 0.6;
   bottom: 0;
   left: 0;
   padding-inline: 1.5rem;
@@ -164,6 +181,52 @@ section.nav-cta-wrapper .desktop-nav .nav-list .nav-list-item a span {
 .main-grid .cherries-text h3,
 .main-grid .orange-text h3 {
   font-size: var(--step-1);
+}
+
+/* Testimonial section */
+.testimonials {
+  background-color: var(--white);
+  padding: var(--space-xl) var(--space-m);
+  text-align: center;
+}
+.testimonials h3 {
+  text-transform: uppercase;
+  color: var(--grey-550);
+  letter-spacing: 0.2rem;
+}
+.testimonials .testimonial-wrapper .testimonial-tile img {
+  display: block;
+  margin-inline: auto;
+  margin-block: var(--space-xl) var(--space-l);
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+.testimonials .testimonial-wrapper .testimonial-tile p {
+  margin-block-end: var(--space-s);
+  color: var(--grey-950);
+}
+.testimonials .testimonial-wrapper .testimonial-tile .name {
+  font-family: Fraunces, serif;
+  font-weight: 900;
+  margin-block-end: 0.5rem;
+}
+.testimonials .testimonial-wrapper .testimonial-tile .title {
+  color: var(--grey-600);
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+footer {
+  background-color: var(--green-500);
+}
+footer .footer-logo path {
+  fill: #397566;
 }
 
 .mobile-nav {
