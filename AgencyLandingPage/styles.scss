@@ -103,8 +103,11 @@ section.nav-cta-wrapper {
     width: 100%;
   }
 
-  h2 {
+  h2,
+  h3 {
     margin-block-end: 1rem;
+    line-height: 1.8rem;
+    font-weight: 900;
   }
 
   p {
@@ -163,11 +166,27 @@ section.nav-cta-wrapper {
   }
 
   .cherries-tile {
-    order: 5
+    order: 5;
+    position: relative;
   }
 
   .orange-tile {
-    order: 6
+    order: 6;
+    position: relative;
+  }
+
+  .cherries-text,
+  .orange-text {
+    position: absolute;
+    opacity: 0.6;
+    bottom: 0;
+    left: 0;
+    padding-inline: 1.5rem;
+    padding-block-end: 2rem;
+
+    h3 {
+      font-size: var(--step-1);
+    }
   }
 }
 

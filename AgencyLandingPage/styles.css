@@ -93,8 +93,11 @@ section.nav-cta-wrapper .desktop-nav .nav-list .nav-list-item a span {
 .main-grid img {
   width: 100%;
 }
-.main-grid h2 {
+.main-grid h2,
+.main-grid h3 {
   margin-block-end: 1rem;
+  line-height: 1.8rem;
+  font-weight: 900;
 }
 .main-grid p {
   margin-block-end: 1.5rem;
@@ -143,9 +146,24 @@ section.nav-cta-wrapper .desktop-nav .nav-list .nav-list-item a span {
 }
 .main-grid .cherries-tile {
   order: 5;
+  position: relative;
 }
 .main-grid .orange-tile {
   order: 6;
+  position: relative;
+}
+.main-grid .cherries-text,
+.main-grid .orange-text {
+  position: absolute;
+  opacity: 0.6;
+  bottom: 0;
+  left: 0;
+  padding-inline: 1.5rem;
+  padding-block-end: 2rem;
+}
+.main-grid .cherries-text h3,
+.main-grid .orange-text h3 {
+  font-size: var(--step-1);
 }
 
 .mobile-nav {
