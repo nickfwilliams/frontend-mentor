@@ -53,6 +53,7 @@ section.nav-cta-wrapper .header-content h1 {
   font-weight: 900;
   letter-spacing: 0.2rem;
   margin-block: 4rem 3.5rem;
+  text-align: center;
 }
 section.nav-cta-wrapper .header-content img {
   margin-inline: auto;
@@ -67,7 +68,7 @@ section.nav-cta-wrapper .desktop-nav {
   padding: var(--space-s) var(--space-xs);
 }
 section.nav-cta-wrapper .desktop-nav .nav-list {
-  display: flex;
+  display: none;
   gap: 3rem;
   padding: 0;
   list-style: none;
@@ -82,6 +83,69 @@ section.nav-cta-wrapper .desktop-nav .nav-list .nav-list-item a span {
   background-color: white;
   padding: 1rem 2rem;
   border-radius: 50px;
+}
+
+.main-grid {
+  display: grid;
+  text-align: center;
+  /* Grid mobile ordering */
+}
+.main-grid img {
+  width: 100%;
+}
+.main-grid h2 {
+  margin-block-end: 1rem;
+}
+.main-grid p {
+  margin-block-end: 1.5rem;
+}
+.main-grid a {
+  position: relative;
+  font-family: "fraunces", serif;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+}
+.main-grid a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: 0;
+  width: 110%;
+  height: 0.5em;
+  background-color: var(--yellow-500);
+  opacity: 0.3;
+  border-radius: 10px;
+  z-index: -1;
+  transition: background-color 0.3s ease;
+}
+.main-grid a:hover::after {
+  opacity: 1;
+}
+.main-grid .image-transform {
+  order: 1;
+}
+.main-grid .transform-text {
+  order: 2;
+  padding: var(--space-xl) var(--space-s);
+}
+.main-grid .image-stand-out {
+  order: 3;
+}
+.main-grid .standout-text {
+  order: 4;
+  padding: var(--space-xl) var(--space-s);
+}
+.main-grid .standout-text a::after {
+  background-color: #ffbaba;
+}
+.main-grid .cherries-tile {
+  order: 5;
+}
+.main-grid .orange-tile {
+  order: 6;
 }
 
 .mobile-nav {
