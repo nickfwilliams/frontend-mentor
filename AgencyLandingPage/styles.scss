@@ -72,6 +72,73 @@ section.nav-cta-wrapper {
     }
   }
 
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 2000;
+    outline: 1px solid red;
+    right: 1rem;
+    top: 1rem;
+    background: transparent;
+    background-image: url(/AgencyLandingPage/images/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    border: 0;
+  }
+
+  .mobile-nav {
+    // display: none;
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    background-color: white;
+    z-index: 1;
+    text-align: center;
+
+    .nav-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      svg {
+        align-self: end;
+        margin-block-start: -30px;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: var(--space-xs) 0;
+
+        li {
+          margin-block: var(--space-m);
+
+          &:last-child {
+            margin-block-start: 2.5rem;
+          }
+
+          a {
+            text-decoration: none;
+            font-weight: 600;
+          }
+
+          .contact {
+            background-color: var(--yellow-500);
+            padding: var(--space-xs) var(--space-m);
+            border-radius: 50px;
+            font-family: Fraunces, serif;
+            text-transform: uppercase;
+            color: var(--grey-950);
+            font-weight: 800;
+          }
+        }
+      }
+    }
+  }
+
   .desktop-nav {
     width: 100%;
     position: absolute;
@@ -83,7 +150,7 @@ section.nav-cta-wrapper {
 
     .nav-list {
       display: none;
-      gap: 3rem;
+      gap: var(--space-m);
       padding: 0;
       list-style: none;
 
@@ -95,7 +162,7 @@ section.nav-cta-wrapper {
         span {
           color: var(--blue-800);
           background-color: white;
-          padding: 1rem 2rem;
+          padding: var(--space-m) var(--space-xl);
           border-radius: 50px;
         }
       }
@@ -274,16 +341,20 @@ footer {
     margin-block: var(--space-m);
   }
 
-  .link-wrapper a {
-    margin-inline: 2rem;
-    color: var(--green-800);
-    text-decoration: none;
-    font-weight: 600;
+  .link-wrapper {
 
-    &:hover {
-      color: white;
+    a {
+      margin-inline: 1rem;
+      color: var(--green-800);
+      text-decoration: none;
+      font-weight: 600;
+
+      &:hover {
+        color: white;
+      }
     }
   }
+
 
   .socials-wrapper {
     display: flex;
@@ -301,8 +372,4 @@ footer {
       }
     }
   }
-}
-
-.mobile-nav {
-  display: none;
 }

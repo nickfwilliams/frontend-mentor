@@ -19,6 +19,7 @@
 
 		<title>Frontend Mentor | Sunnyside agency landing page</title>
 	</head>
+
 	<body>
 		<section class="nav-cta-wrapper">
 			<img
@@ -30,6 +31,42 @@
 				"
 				alt=""
 			/>
+
+			<!-- MOBILE NAV BUTTON -->
+			<button
+				class="mobile-nav-toggle"
+				aria-controls="primary-navigation"
+				aria-expanded="false"
+			></button>
+
+			<!-- MOBILE NAVIGATION -->
+
+			<nav class="mobile-nav">
+				<div class="nav-wrapper">
+					<svg
+						width="30"
+						height="30"
+						viewBox="0 0 30 30"
+						style="background: none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M32.5 0L0 33H32.5V0Z"
+							fill="#fff"
+						/>
+					</svg>
+					<ul class="nav-list">
+						<li class="nav-list-item"><a href="#">About</a></li>
+						<li class="nav-list-item"><a href="#">Services</a></li>
+						<li class="nav-list-item"><a href="#">Projects</a></li>
+						<li class="nav-list-item">
+							<a href="#" class="contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
 
 			<!-- DESKTOP NAVIGATION -->
 
@@ -46,26 +83,7 @@
 				</ul>
 			</nav>
 
-			<!-- MOBILE NAVIGATION -->
-
-			<nav class="mobile-nav">
-				<img src="images/logo.svg" class="svg" alt="Sunny Side" />
-
-				<a href="#"
-					><img
-						id="menu-hamburger"
-						class="svg"
-						src="images/icon-hamburger.svg"
-						alt=""
-				/></a>
-
-				<ul class="nav-list">
-					<li class="nav-list-item"><a href="#">About</a></li>
-					<li class="nav-list-item"><a href="#">Services</a></li>
-					<li class="nav-list-item"><a href="#">Projects</a></li>
-					<li class="nav-list-item"><a href="#">Contact</a></li>
-				</ul>
-			</nav>
+			<!-- HEADER CONTENT -->
 			<div class="header-content">
 				<h1>We are creatives</h1>
 				<img class="header-arrow svg" src="images/icon-arrow-down.svg" alt="" />
@@ -287,5 +305,7 @@
 				></a>
 			</div>
 		</footer>
+		<!-- JS -->
+		<script src="/AgencyLandingPage/navigation.js"></script>
 	</body>
 </html>
